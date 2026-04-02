@@ -8,16 +8,6 @@
 
 - 🔗 [codecademy.com/learn/learn-css](https://www.codecademy.com/learn/learn-css)
 
-## 🎮 Interactive Games
-
-(Highly Recommended)
-
-- 🐸 Flexbox Practice: [flexboxfroggy.com](https://flexboxfroggy.com/)
-- 🎯 CSS Challenge Game: [guess-css.app](https://www.guess-css.app/)
-- 🎯 CSS Selectors Practice: [flukeout.github.io](https://flukeout.github.io/)
-- 🌱 CSS Grid Practice: [cssgridgarden.com](https://cssgridgarden.com/)
-- ⚔️ Advanced Grid Game: [codingfantasy.com/games/css-grid-attack/play](https://codingfantasy.com/games/css-grid-attack/play)
-
 ## 🛠️ Tools (Very Useful)
 
 - ✅ [Shadow Examples](https://getcssscan.com/css-box-shadow-examples)
@@ -32,6 +22,14 @@
 - 📖 [Flexbox Guidebook](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Responsive Design (MDN)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - 📖 [Some other books](https://github.com/shehza-d/Learning-Resources/tree/main/03.UX-UI-design-and-CSS)
+
+## 🎮 Interactive Games (Highly Recommended)
+
+- 🐸 Flexbox Practice: [flexboxfroggy.com](https://flexboxfroggy.com/)
+- 🎯 CSS Challenge Game: [guess-css.app](https://www.guess-css.app/)
+- 🎯 CSS Selectors Practice: [flukeout.github.io](https://flukeout.github.io/)
+- 🌱 CSS Grid Practice: [cssgridgarden.com](https://cssgridgarden.com/)
+- ⚔️ Advanced Grid Game: [codingfantasy.com/games/css-grid-attack/play](https://codingfantasy.com/games/css-grid-attack/play)
 
 ## 🎨 Design & UI Inspiration
 
