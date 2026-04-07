@@ -8,9 +8,11 @@
   <body>
     <h1>Forms</h1>
 
+    <!-- https://www.w3schools.com/html/html_form_attributes.asp -->
     <!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+
     <form>
-      <input type="text" /> <br />
+      <input type="text" placeholder="Enter your name" /> <br />
       <input type="number" /> <br />
       <input type="tel" /> <br />
       <input type="password" /> <br />
@@ -24,15 +26,57 @@
 
       ---
 
-      <!-- <input type="radio" />
-      <input type="checkbox" />
-      <input type="file" /> -->
+      <input type="radio" id="male" name="gender" />
+      <label for="male">male</label>
 
+      <input type="radio" id="female" name="gender" />
+      <label for="female">female</label>
+
+      <br />
+
+      <input type="radio" name="education" id="matric" />
+      <label for="matric">matric</label>
+
+      <input type="radio" name="education" id="inter" />
+      <label for="inter">inter</label>
+
+      <input type="radio" name="education" id="university" />
+      <label for="university">university</label>
+
+      <br /><br />
+
+      hobbies:
+      <input type="checkbox" id="boxing" name="hobbies" />
+      <label for="boxing">boxing</label>
+
+      <input type="checkbox" id="reading" name="hobbies" />
+      <label for="reading">reading</label>
+
+      <input type="checkbox" id="memo" name="hobbies" />
+      <label for="memo">memorization of quran</label>
+
+      <input type="checkbox" id="other" name="hobbies" />
+
+      <br /><br />
+      <input type="file" accept=".pdf" />
+
+      <!-- https://www.youtube.com/@recluze -->
+      <!-- same video for web dev  -->
+      <!-- https://youtu.be/kdT_k6pyJu8?si=CEnIZgoSD4OIKuZW -->
+
+      <!-- 
       <button type="button">mera button 1</button>
       <button type="reset">reset</button>
-      <button type="submit">done</button>
+      <button type="submit">done</button> -->
     </form>
 
-	validation
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    validation
   </body>
 </html>
