@@ -12,11 +12,21 @@
     <!-- https://www.w3schools.com/html/html_form_input_types.asp -->
 
     <form>
-      <input type="text" placeholder="Enter your name" /> <br />
-      <input type="number" /> <br />
-      <input type="tel" /> <br />
+      name *: <input type="text" name="name" placeholder="Enter your name" required />
+      <br />
+      age: <input type="number" name="age" /> <br />
+
+      <label> phone number: (optional) 
+        <input type="tel" name="phone-number" value="+92" id="phone-number"  /> <br />
+      </label>
+
       <input type="password" /> <br />
-      <input type="email" /> <br />
+      <input
+        type="email"
+        placeholder="Enter your email"
+        value="shehzad2@gmail.com"
+      />
+      <br />
       <input type="age" /> <br />
       <input type="color" /> <br />
       <input type="date" /> <br />
@@ -52,24 +62,38 @@
       <input type="checkbox" id="reading" name="hobbies" />
       <label for="reading">reading</label>
 
-      <input type="checkbox" id="memo" name="hobbies" />
+      <input type="checkbox" checked="true" id="memo" name="hobbies" />
       <label for="memo">memorization of quran</label>
 
       <input type="checkbox" id="other" name="hobbies" />
 
       <br /><br />
+
       <input type="file" accept=".pdf" />
 
       <!-- https://www.youtube.com/@recluze -->
       <!-- same video for web dev  -->
       <!-- https://youtu.be/kdT_k6pyJu8?si=CEnIZgoSD4OIKuZW -->
 
-      <!-- 
       <button type="button">mera button 1</button>
       <button type="reset">reset</button>
-      <button type="submit">done</button> -->
-    </form>
+      <button type="submit">done</button>
 
+      <br />
+      <br />
+      <br />
+      <br />
+      <!-- 9/Apr -->
+      <select name="cities">
+        <option value="karachi">Karachi</option>
+        <option value="islamabad">islamabad</option>
+        <option value="lahore">lahore</option>
+      </select>
+      <input type="hidden" />
+      <br />
+
+      <button type="submit">done</button>
+    </form>
     <br />
     <br />
     <br />
@@ -77,6 +101,13 @@
     <br />
     <br />
     <br />
-    validation
+    <br />
+    <br />
+    <br />
+
+    <!-- pg 165 -->
+
+
+   
   </body>
 </html>
