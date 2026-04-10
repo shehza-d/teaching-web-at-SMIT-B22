@@ -1,4 +1,4 @@
-# Essential keyboard shortcuts
+# ⌨️  Essential keyboard shortcuts
 
 Learning keyboard shortcuts is one of the fastest ways to improve your efficiency and confidence when using a computer. Instead of relying on slow, repetitive mouse actions, shortcuts help you complete tasks quickly, stay focused, and work more professionally. As a habit, whenever you start using or download any new software, **make it a priority to learn its essential shortcuts first**. This small effort will save you a significant amount of time in the long run and make your overall workflow smoother and more productive.
 
@@ -85,7 +85,7 @@ Learning keyboard shortcuts is one of the fastest ways to improve your efficienc
 ### 🖥️ Terminal & Panels
 
 - **Toggle terminal** → `` Ctrl + ` ``
-- **New terminal** → `Ctrl + Shift + ``
+- **New terminal** → ``Ctrl + Shift + ` ``
 - **Toggle sidebar** → `Ctrl + B`
 
 ## ⚡ Pro Tips
