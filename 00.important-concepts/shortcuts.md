@@ -77,6 +77,7 @@ Learning keyboard shortcuts is one of the fastest ways to improve your efficienc
 
 ### 🧠 Code Intelligence
 
+- **Comments** → `Ctrl + /`
 - **Format document** → `Shift + Alt + F` (very imp)
 - **Auto-complete trigger** → `Ctrl + Space` (imp)
 - **Quick fix / suggestions** → `Ctrl + .`
