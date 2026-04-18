@@ -1,0 +1,19 @@
+* {
+	text-transform: uppercase;
+}
+
+/* 238 */
+
+h1 {
+  color: blue;
+  background-color: orange;
+  text-decoration: underline;
+}
+/* , ky sath ak se zada selector bhi aasagty hyn */
+
+
+
+/* dot . is for class */
+/* hash # is for id */
+
+/* CSS selectors are case sensitive */
