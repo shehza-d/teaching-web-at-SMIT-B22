@@ -1,0 +1,32 @@
+/* 1 External CSS */
+
+/* */
+
+/* * star is to select everything */
+
+/* * {
+   border: 1px solid blue;
+} */
+p > a {
+    color: red;
+    border: 2px solid blue;
+    }
+    /* 
+
+.smit > span  {
+    background-color: yellow;
+}
+
+div li {
+    color: green;
+} */
+
+/* button ky baad wala anchor select hoga */
+button + a {
+  color: rebeccapurple;
+  background-color: aquamarine;
+}
+
+h1 {
+    color: yellow;
+}
