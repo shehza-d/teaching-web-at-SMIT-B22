@@ -10,6 +10,7 @@ const res = await fetch(`${API}`, {
 
 const data = await res.json();
 const students = data?.data?.results || [];
+const title = students[0]?.quiz?.title || "Quiz";
 
 const formatted = students.map((s) => {
   const marks = s.score;
@@ -31,7 +32,7 @@ const formatted = students.map((s) => {
 formatted.sort((a, b) => b.marks - a.marks);
 
 // generate markdown
-let md = `# Quiz Results\n\n`;
+let md = `# ${title} Results\n\n`;
 md += `| S.No | Name | % | Status | Marks |\n`;
 md += `|------|------|----|--------|-------|\n`;
 
@@ -40,6 +41,6 @@ formatted.forEach((s, i) => {
 });
 
 // write file
-fs.writeFileSync("02.CSS.md", md);
+fs.writeFileSync(`02.${title.split(" ")[0].trim()}.md`, md);
 
 console.log("Markdown generated ✅");
