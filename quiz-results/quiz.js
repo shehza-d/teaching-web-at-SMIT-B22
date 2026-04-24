@@ -43,6 +43,6 @@ formatted.forEach((s, i) => {
 });
 
 // write file
-fs.writeFileSync("quiz-results/02.CSS.md", md);
+fs.writeFileSync("02.CSS.md", md);
 
 console.log("Markdown generated ✅");
