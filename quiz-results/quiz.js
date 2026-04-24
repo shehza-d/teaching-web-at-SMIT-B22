@@ -9,11 +9,8 @@ const res = await fetch(`${API}`, {
 });
 
 const data = await res.json();
-
-// FIX: correct structure
 const students = data?.data?.results || [];
 
-// map required fields
 const formatted = students.map((s) => {
   const marks = s.score;
   const total = s.total_questions || 1;
@@ -26,11 +23,11 @@ const formatted = students.map((s) => {
       "Unknown",
     marks,
     percentage,
-    status: s.status || (percentage >= 50 ? "passed" : "failed"),
+    status: s.status || (percentage >= 70 ? "passed" : "failed"),
   };
 });
 
-// sort descending
+// sort descending for highest on top
 formatted.sort((a, b) => b.marks - a.marks);
 
 // generate markdown
