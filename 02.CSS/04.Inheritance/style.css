@@ -1,0 +1,19 @@
+div {
+    border: 2px solid red;
+    font-family: sans-serif;
+    /* color: red; */
+}
+
+a  {
+    color: inherit;
+}
+
+
+div p {
+    border: inherit;
+}
+
+body {
+    background-color: black;
+    color: aqua;
+}
