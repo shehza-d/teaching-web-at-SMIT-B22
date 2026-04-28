@@ -1,0 +1,2962 @@
+Delivered-To: shehzaddiqbal@gmail.com
+Received: by 2002:a17:907:8f07:b0:bae:b01e:5a4c with SMTP id wg7csp953296ejc;
+        Sun, 26 Apr 2026 01:35:14 -0700 (PDT)
+X-Received: by 2002:a05:6a00:90a8:b0:82c:7eb1:4d61 with SMTP id d2e1a72fcca58-82f8c8bb03amr38309896b3a.32.1777192513830;
+        Sun, 26 Apr 2026 01:35:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1777192513; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kvf+x1rUSWfXcV3tNxd6ofYW5p4i8D1Un/TYe9Wl5ujFFgEi+S3ULFyhDAJMiFgYgH
+         hbF747gRIwx9T+yk1aBAlZxiMuvLJOSJXe9n/fEi5db9U3UgMHjQlJVlr3bM426WSx1T
+         AkzsDORYUc0jmM4PHt3ma3ZelcCB6b+k+Oq0ICmIGotiAW+SctCCIPhDsRWwDhfFw0j5
+         52DpU4kVl1QctF3m5Y2Q62nvsZbKt3lvG0dsYfp32ENxAV8IjVLyT0OPNHP3Hw9gc4CU
+         IRx68B+1oURmFqDMTYCadZyWwHsrDdA6ZYMP7DLRVukZSaHtRsGCW7/WqEIPkI1HRvwx
+         H8lA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:mime-version:from:subject:date:message-id:dkim-signature
+         :dkim-signature;
+        bh=akUacdD4vE1EijD082/vULDo2vtAKxNPgKtakP1CWuo=;
+        fh=bHOvBGyv+JxaBQKeQ5rbcGHRob5Y1cX4++v09+vr7so=;
+        b=AdZTvYjEyVSQG0LYp36SJmuuw8PJbSxFVzVbsK9mI8RNlk2juu5QZFyE+kZArZaABJ
+         YrMHYpzFlyvCh99ICrY4xfD2BdbsGbKjia+fK2E+7hoMO085gYVkiNw6Ky/5fwqK9mzi
+         V/QZ1WX52mM/gDCM3MLvwSQPYtCbPMyZJNV03y3SpPjFTxK+ZKdZY/vVVQ1rY/SevKEC
+         4m3VUyV5UQWl0WWTxKlMiRB6opAL0xOAGHxOLmoxvo9XcybvpVKvIy54c1IwVPYGDo7W
+         Y5ZTKZlBj17mzAHDKnYPl+dWkT7dODkNat51O2UdrjgoM0pZGXeZUsJYv4o++ZEff9uo
+         /KMQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@typing.com header.s=s1 header.b=oUy+Ykk5;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=MLM27UzR;
+       spf=pass (google.com: domain of bounces+7505650-0ad4-shehzaddiqbal=gmail.com@em5970.typing.com designates 167.89.81.82 as permitted sender) smtp.mailfrom="bounces+7505650-0ad4-shehzaddiqbal=gmail.com@em5970.typing.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=typing.com
+Return-Path: <bounces+7505650-0ad4-shehzaddiqbal=gmail.com@em5970.typing.com>
+Received: from o1678981x82.outbound-mail.sendgrid.net (o1678981x82.outbound-mail.sendgrid.net. [167.89.81.82])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-82f8ebe9b46si65269685b3a.124.2026.04.26.01.35.12
+        for <shehzaddiqbal@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 26 Apr 2026 01:35:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+7505650-0ad4-shehzaddiqbal=gmail.com@em5970.typing.com designates 167.89.81.82 as permitted sender) client-ip=167.89.81.82;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@typing.com header.s=s1 header.b=oUy+Ykk5;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=MLM27UzR;
+       spf=pass (google.com: domain of bounces+7505650-0ad4-shehzaddiqbal=gmail.com@em5970.typing.com designates 167.89.81.82 as permitted sender) smtp.mailfrom="bounces+7505650-0ad4-shehzaddiqbal=gmail.com@em5970.typing.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=typing.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=typing.com;
+	h=date:subject:from:mime-version:to:content-type:cc:content-type:date:
+	feedback-id:from:subject:to;
+	s=s1; t=1777192511; bh=akUacdD4vE1EijD082/vULDo2vtAKxNPgKtakP1CWuo=;
+	b=oUy+Ykk53z2Gas9eBSGjF4IPToQUyusKJq/3WNAScqgI9kjBJYikvXrbh7zZfivQNjGl
+	Z/6ai139779OJY4o+/LjqxTSqYV46lUawZepyEoFHK3POVHSHVe0IFAJZy1rvtpakeJl+N
+	fNhzDvjiQH0EOzsTkqUg+TMXVPwLfiCNztdeD0pq8K7moQOMBq0UgUEW+0m3R61lICqJlx
+	IdgeI1N9wl3g7M6LwmoXQQOpuYxZcR+vGDoezZUWLFlYKuP8ODeKU8zwd3yJtdVubnwKzo
+	qqsDhsYm53mkb/GxGQbp6c+HRXjUoDOmCM48Gj17BN8voT8PzwAmMywaqn12y8yA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=date:subject:from:mime-version:to:content-type:cc:content-type:date:
+	feedback-id:from:subject:to;
+	s=smtpapi; t=1777192511; bh=akUacdD4vE1EijD082/vULDo2vtAKxNPgKtakP1CWuo=;
+	b=MLM27UzRD+XI0Ga7XjPMI8mKbtdCnLiVEiQXXteXmy2ID4nEY2XB0BBGQ900V7fnmhYM
+	domt2Y4jOWPM8rOmNfHZ7wKFCGvVrXOcjxxvWl6kXjcas7ddxmoZ0yj/DTVKMxrno+rstm
+	DIh0OUfc0noE4OwDa8wee+uzFOYja9lxU=
+Received: by recvd-56d94c966c-qtrxw with SMTP id recvd-56d94c966c-qtrxw-1-69EDCE3F-4D
+	2026-04-26 08:35:11.84723241 +0000 UTC m=+384296.205879487
+Received: from typing.com (unknown)
+	by geopod-ismtpd-72 (SG) with ESMTP
+	id XlV1mUJTRdu_I4HTy1-jZg
+	for <shehzaddiqbal@gmail.com>;
+	Sun, 26 Apr 2026 08:35:11.747 +0000 (UTC)
+Received: by typing.com (Postfix, from userid 0)
+	id B21CB4392B; Sun, 26 Apr 2026 08:35:11 +0000 (UTC)
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+	by typing.com (Postfix) with SMTP id AF3B03FAD9
+	for <shehzaddiqbal@gmail.com>; Sun, 26 Apr 2026 08:35:11 +0000 (UTC)
+Message-ID: <d7e1c28d25da8e9b60a3bc67631f1459@swift.generated>
+Date: Sun, 26 Apr 2026 08:35:11 +0000 (UTC)
+Subject: Your Weekly Typing.com Recap
+From: "Typing.com" <support@typing.com>
+MIME-Version: 1.0
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E+GjdTndfA2NEvDszD3owsuYkXU4QdYTJ6desD4vyreGgcyx+9NqQJ5Plc?=
+ =?us-ascii?Q?wqGRqFm5Iq1MDd1xuaDemUFTaopPeQ83dtdX9VE?=
+ =?us-ascii?Q?+=2FBO6UEcOVeI5pQQyDYcTs+bPLvS8GHyzGWgv6O?=
+ =?us-ascii?Q?i=2FJQ4bSWQLDY9YwIXkGBv6swhV99HbwcisLzW8n?=
+ =?us-ascii?Q?Al9Nl=2FHsc3iPLipiwQ+oy4hio=2FYSGILzUnPfMll?=
+ =?us-ascii?Q?Sn4Rui7mBoJujKS=2F2QJ4nN3ppIbn+tR3z19JG=2Fx?=
+ =?us-ascii?Q?AJTQ?=
+To: shehzaddiqbal@gmail.com
+X-Entity-ID: u001.15ghvfBkAgVzEQvkQKJg7g==
+Content-Type: multipart/related;
+ boundary="_=_swift_1777192511_0562256edad7bd372c6b19d40bd4f36f_=_"
+
+
+--_=_swift_1777192511_0562256edad7bd372c6b19d40bd4f36f_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style=3D"width:100%;font-family:Lato, arial, 'helvetica neue', helvet=
+ica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;pad=
+ding:0;Margin:0;">
+<head>
+    <meta charset=3D"UTF-8">
+    <meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewp=
+ort">
+    <meta name=3D"x-apple-disable-message-reformatting">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <meta content=3D"telephone=3Dno" name=3D"format-detection">
+    <title>shared.weekly_recap_title</title>
+    <!--[if (mso 16)]>
+    <style type=3D"text/css">
+        a {text-decoration: none;}
+    </style>
+    <![endif]-->
+    <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><!=
+[endif]-->
+    <!--[if !mso]><!-- -->
+    <link href=3D"https://fonts.googleapis.com/css?family=3DLato:400,400i,7=
+00,700i" rel=3D"stylesheet">
+    <!--<![endif]-->
+    <style type=3D"text/css">
+        @media  screen {}
+        @media  only screen and (max-width:600px) {p, ul li, ol li, a { fon=
+t-size:16px!important; line-height:150%!important } h1 { font-size:30px!imp=
+ortant; text-align:left; line-height:120% } h2 { font-size:26px!important; =
+text-align:left; line-height:120% } h3 { font-size:20px!important; text-ali=
+gn:left; line-height:120% } h1 a { font-size:30px!important; text-align:lef=
+t } h2 a { font-size:26px!important; text-align:left } h3 a { font-size:20p=
+x!important; text-align:left } .es-menu td a { font-size:16px!important } .=
+es-header-body p, .es-header-body ul li, .es-header-body ol li, .es-header-=
+body a { font-size:16px!important } .es-footer-body p, .es-footer-body ul l=
+i, .es-footer-body ol li, .es-footer-body a { font-size:16px!important } td=
+ .es-infoblock p, td .es-infoblock ul li, td .es-infoblock ol li, td .es-in=
+foblock a { font-size:12px } *[class=3D"gmail-fix"] { display:none!importan=
+t } .es-m-txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt-c h3 { text-alig=
+n:center!important } .es-m-txt-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt=
+-r h3 { text-align:right!important } .es-m-txt-l, .es-m-txt-l h1, .es-m-txt=
+-l h2, .es-m-txt-l h3 { text-align:left!important } .es-m-txt-r img, .es-m-=
+txt-c img, .es-m-txt-l img { display:inline!important } .es-button-border {=
+ display:block!important } a.es-button { font-size:20px!important; display:=
+block!important; border-left-width:0px!important; border-right-width:0px!im=
+portant } .es-btn-fw { border-width:10px 0px!important; text-align:center!i=
+mportant } .es-adaptive table, .es-btn-fw, .es-btn-fw-brdr, .es-left, .es-r=
+ight { width:100%!important } .es-content table, .es-header table, .es-foot=
+er table, .es-content, .es-footer, .es-header { width:100%!important; max-w=
+idth:600px!important } .es-adapt-td { display:block!important; width:100%!i=
+mportant } .adapt-img { width:100%!important; height:auto!important } .es-m=
+-p0 { padding:0px!important } .es-m-p0r { padding-right:0px!important } .es=
+-m-p0l { padding-left:0px!important } .es-m-p0t { padding-top:0px!important=
+ } .es-m-p0b { padding-bottom:0!important } .es-m-p20b { padding-bottom:20p=
+x!important } .es-mobile-hidden, .es-hidden { display:none!important } .es-=
+desk-hidden { display:table-row!important; width:auto!important; overflow:v=
+isible!important; float:none!important; max-height:inherit!important; line-=
+height:inherit!important } .es-desk-menu-hidden { display:table-cell!import=
+ant } table.es-table-not-adapt, .esd-block-html table { width:auto!importan=
+t } table.es-social { display:inline-block!important } table.es-social td {=
+ display:inline-block!important } }
+        #outlook a {
+            padding:0;
+        }
+        .ExternalClass {
+            width:100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height:100%;
+        }
+        .es-button {
+            mso-style-priority:100!important;
+            text-decoration:none!important;
+        }
+        a[x-apple-data-detectors] {
+            color:inherit!important;
+            text-decoration:none!important;
+            font-size:inherit!important;
+            font-family:inherit!important;
+            font-weight:inherit!important;
+            line-height:inherit!important;
+        }
+        .es-desk-hidden {
+            display:none;
+            float:left;
+            overflow:hidden;
+            width:0;
+            max-height:0;
+            line-height:0;
+            mso-hide:all;
+        }
+    </style>
+</head>
+<body style=3D"width:100%;font-family:Lato, arial, 'helvetica neue', helvet=
+ica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;pad=
+ding:0;Margin:0;">
+<div class=3D"es-wrapper-color" style=3D"background-color:#FFFFFF;">
+    <!--[if gte mso 9]>
+    <v:background
+        xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+        <v:fill type=3D"tile" src=3D"https://teachingcomemail.s3.amazonaws.=
+com/all_brands/details/bg-gradient.jpg" color=3D"#ffffff" origin=3D"0.5, 0"=
+ position=3D"0.5,0"></v:fill>
+    </v:background>
+    <![endif]-->
+    <table class=3D"es-wrapper" width=3D"100%" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:=
+collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;backg=
+round-repeat:repeat-x;background-position:center top;background-image:url(h=
+ttps://teachingcomemail.s3.amazonaws.com/all_brands/details/bg-gradient.jpg=
+);" background=3D"https://teachingcomemail.s3.amazonaws.com/all_brands/deta=
+ils/bg-gradient.jpg">
+        <tr style=3D"border-collapse:collapse;">
+            <td valign=3D"top" style=3D"padding:0;Margin:0;">
+                <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-head=
+er" align=3D"center" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bor=
+der-collapse:collapse;border-spacing:0px;table-layout:fixed !important;widt=
+h:100%;background-color:transparent;background-repeat:repeat;background-pos=
+ition:center top;">
+                    <tr style=3D"border-collapse:collapse;">
+                        <td align=3D"center" style=3D"padding:0;Margin:0;">
+                            <table class=3D"es-header-body" width=3D"600" c=
+ellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"transparent" align=3D"center"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collaps=
+e;border-spacing:0px;background-color:transparent;">
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" bgcolor=3D"transpare=
+nt" style=3D"padding:0;Margin:0;padding-top:20px;padding-bottom:20px;backgr=
+ound-color:transparent;">
+                                        <!--[if mso]>
+                                        <table width=3D"600" cellpadding=3D=
+"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td width=3D"294" valign=3D=
+"top">
+                                        <![endif]-->
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" align=3D"left" class=3D"es-left" style=3D"mso-table-lspace:0pt;mso-=
+table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"294" class=3D"=
+es-m-p20b" align=3D"left" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"le=
+ft" class=3D"es-m-txt-c" style=3D"padding:0;Margin:0;">
+                                                                <a target=
+=3D"_blank" href=3D"https://www.typing.com" style=3D"-webkit-text-size-adju=
+st:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:=
+Lato, arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-de=
+coration:none;color:#FFFFFF;">
+                                                                    <img sr=
+c=3D"https://s3.amazonaws.com/teachingcomemail/typing_com/logos/typing-logo=
+-wh.png" alt=3D"Typing.com Weekly Recap" style=3D"display:block;border:0;ou=
+tline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width=3D"1=
+50" title=3D"Typing.com">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]>
+                                        </td>
+                                        <td width=3D"20"></td>
+                                        <td width=3D"286" valign=3D"top">
+                                        <![endif]-->
+                                        <!--[if mso]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" style=3D"padding:0;M=
+argin:0;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"600" align=3D"=
+center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;">
+                                                                <table bord=
+er=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collaps=
+e;border-spacing:0px;">
+                                                                    <tr sty=
+le=3D"border-collapse:collapse;">
+                                                                        <td=
+ style=3D"padding:0;Margin:0px 0px 0px 0px;border-bottom:1px solid #CCCCCC;=
+background:none;height:1px;width:100%;margin:0px;"></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" bgcolor=3D"#ffffff" =
+style=3D"Margin:0;padding-bottom:10px;padding-left:20px;padding-right:20px;=
+padding-top:40px;background-color:#FFFFFF;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"560" align=3D"=
+center" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                                           =
+                                     <tr style=3D"border-collapse:collapse;=
+">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;">
+                                                                <h1 style=
+=3D"Margin:0;line-height:58px;mso-line-height-rule:exactly;font-family:Lato=
+, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:48px;fo=
+nt-style:normal;font-weight:bold;color:#4A4A4A;text-align:center;margin-top=
+:0;margin-bottom:0;Margin:0;">
+                                                                    <strong=
+>Your Weekly Recap</strong>
+                                                                </h1>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;">
+                                                                <h2 style=
+=3D"Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:Lato=
+, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:24px;fo=
+nt-style:normal;font-weight:bold;color:#3295DB;text-align:center;margin-top=
+:0;margin-bottom:0;Margin:0;">
+                                                                    <strong=
+>April 20 - 26, 2026</strong>
+                                                                </h2>
+                                                            </td>
+                                                        </tr>
+                                                                           =
+                                 </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-cont=
+ent" align=3D"center" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px;table-layout:fixed !important;wid=
+th:100%;">
+                    <tr style=3D"border-collapse:collapse;">
+                        <td align=3D"center" bgcolor=3D"#f7f7f7" style=3D"p=
+adding:0;Margin:0;background-color:#F7F7F7;">
+                            <table bgcolor=3D"#ffffff" class=3D"es-content-=
+body" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"600" st=
+yle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;background-color:#FFFFFF;">
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-top:20px;padding-left:20px;padding-right:20px;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"560" align=3D"=
+center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:20px;padding-bottom:20px;">
+                                                                <table bord=
+er=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collaps=
+e;border-spacing:0px;">
+                                                                    <tr sty=
+le=3D"border-collapse:collapse;">
+                                                                        <td=
+ style=3D"padding:0;Margin:0px 0px 0px 0px;border-bottom:1px solid #CCCCCC;=
+background:none;height:1px;width:100%;margin:0px;"></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                               =20
+                                                                    <tr sty=
+le=3D"border-collapse:collapse;">
+                                        <td align=3D"left" style=3D"padding=
+:20px;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-right:1px solid #3295DB;border-spacing:0px;"=
+>
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"100%" align=3D=
+"center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;border-left:1px soli=
+d #3295DB;border-bottom:1px solid #3295DB;background-color:#FFFFFF;" bgcolo=
+r=3D"#ffffff">
+                                                        <thead>
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td colspan=3D"=
+5" class=3D"es-m-txt-l" background=3D"#F2F8FE" style=3D"padding:0;Margin:0;=
+background-color:#F2F8FE;border-left:1px solid #3295DB;border-top:1px solid=
+ #3295DB;color:#3295DB;font-size:20px;padding-top:8px;padding-bottom:5px;te=
+xt-align:center;padding-left:20px;">
+                                                                <strong>
+                                                                    1 Stude=
+nts Requesting to Join
+                                                                </strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td colspan=3D"=
+5" class=3D"es-m-txt-l" background=3D"#F2F8FE" style=3D"padding:0;Margin:0;=
+background-color:#F2F8FE;border-bottom:1px solid #3295DB;color:#3295DB;font=
+-size:20px;padding-top:0px;padding-bottom:8px;text-align:center;">
+                                                                <p style=3D=
+"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-adjust:none;-ms-te=
+xt-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family=
+:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;colo=
+r:#3295DB; padding-left:20px;">
+                                                                    <a href=
+=3D"https://teachers.typing.com/pending-joins" target=3D"_blank" style=3D"c=
+olor:#3295DB;font-size: 14px;font-weight: bold;">
+                                                                        Vie=
+w All
+                                                                    </a>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        </thead>
+
+                                                                           =
+                                         <tr style=3D"border-collapse:colla=
+pse;">
+                                                                <td class=
+=3D"es-adapt-td" align=3D"left" style=3D"padding:0;margin-top:0;margin-bott=
+om:0;Margin:0;">
+                                                                    <p styl=
+e=3D"padding:10px 20px;margin-top:0;margin-bottom:0;Margin:0;-webkit-text-s=
+ize-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font=
+-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif=
+;line-height:24px;color:#4A4A4A;box-sizing: border-box;">
+                                                                        <b>=
+syed-maaz-tariq</b> wants to join <b>SMIT B22</b>
+                                                                    </p>
+                                                                </td>
+                                                                <td class=
+=3D"es-adapt-td es-m-txt-l" align=3D"right" style=3D"padding:0;margin-top:0=
+;margin-bottom:0;Margin:0;">
+                                                                    <a href=
+=3D"https://teachers.typing.com/classes/61427468" target=3D"_blank" style=
+=3D"mso-style-priority:100 !important;text-decoration:none;-webkit-text-siz=
+e-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-f=
+amily:Lato, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-si=
+ze:16px;color:white;border-style:solid;border-color:#0F8CD2;border-width:10=
+px 20px 10px 20px;display:block;background:#0F8CD2;border-radius:0;font-wei=
+ght:bold;font-style:normal;line-height:17px;width:auto;text-align:center;ma=
+rgin: 10px 20px 10px 20px;">
+                                                                        Vie=
+w
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                       =20
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    </tr>
+                                    <tr style=3D"border-collapse:collapse;"=
+>
+                                        <td align=3D"left" style=3D"padding=
+:0 20px;">
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0=
+pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td width=3D"560" align=
+=3D"center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                        <table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"center" style=3D"padding:0;Margin:0;padding-top:20px;padding-bottom:20p=
+x;">
+                                                                    <table =
+border=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:c=
+ollapse;border-spacing:0px;">
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td style=3D"padding:0;Margin:0px 0px 0px 0px;border-bottom:1px solid #CCC=
+CCC;background:none;height:1px;width:100%;margin:0px;"></td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                                               =20
+                               =20
+                                                                    <tr sty=
+le=3D"border-collapse:collapse;">
+                                        <td align=3D"left" style=3D"Margin:=
+0;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:25px=
+;">
+                                            <!--[if mso]>
+                                            <table width=3D"560" cellpaddin=
+g=3D"0" cellspacing=3D"0">
+                                                <tr>
+                                                    <td width=3D"270" valig=
+n=3D"top">
+                                            <![endif]-->
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" class=3D"es-left" align=3D"left" style=3D"mso-table-lspace:0pt;=
+mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left=
+;">
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td width=3D"270" class=
+=3D"es-m-p20b" align=3D"left" style=3D"padding:0;Margin:0;">
+                                                        <table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"left" style=3D"padding:0;Margin:0;padding-top:40px;">
+                                                                    <h2 sty=
+le=3D"Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:La=
+to, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:24px;=
+font-style:normal;font-weight:bold;color:#A9A9A9;margin-top:0;margin-bottom=
+:0;Margin:0;">
+                                                                        <st=
+rong>In the last week, your students typed:</strong>
+                                                                    </h2>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"left" style=3D"padding:0;Margin:0;">
+                                                                    <span s=
+tyle=3D"font-size:48px;color:#4A4A4A;">
+                                                                        <st=
+rong>22,471</strong>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"left" style=3D"padding:0;Margin:0;padding-bottom:20px;">
+                                                                    <h2 sty=
+le=3D"Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:La=
+to, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:24px;=
+font-style:normal;font-weight:bold;color:#4A4A4A;margin-top:0;margin-bottom=
+:0;Margin:0;">
+                                                                        <st=
+rong>words</strong>
+                                                                    </h2>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            <td width=3D"10"></td>
+                                            <td width=3D"280" valign=3D"top=
+">
+                                            <![endif]-->
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" class=3D"es-right" align=3D"right" style=3D"mso-table-lspace:0p=
+t;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:ri=
+ght;">
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td width=3D"280" align=
+=3D"left" style=3D"padding:0;Margin:0;">
+                                                        <table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-imag=
+e:url(https://teachingcomemail.s3.amazonaws.com/all_brands/details/literatu=
+re-bg.png);background-position:right bottom;background-repeat:no-repeat;" b=
+ackground=3D"https://teachingcomemail.s3.amazonaws.com/all_brands/details/l=
+iterature-bg.png">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td style=
+=3D"padding:0;Margin:0;">
+                                                                    <table =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse=
+;border-spacing:0px;">
+                                                                        <tr=
+ style=3D"border-collapse:collapse;"></tr>
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td style=3D"padding:0;Margin:0;display:table;"></td>
+                                                                           =
+ <td width=3D"150" style=3D"Margin:0;color:#FFFFFF;display:table-cell;font-=
+size:16px;font-weight:bold;padding-left:22px;padding-right:112px;padding-to=
+p:60px;padding-bottom:75px;text-align:center;max-width:150px;">
+                                                                           =
+     Your students have typed the equivalent of <i>MachBeth</i> this week.
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            </tr>
+                                            </table>
+                                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                    <tr style=3D"border-collapse:collapse;"=
+>
+                                        <td align=3D"left" style=3D"padding=
+:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px;">
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0=
+pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td width=3D"560" align=
+=3D"center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                        <table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"center" style=3D"padding:0;Margin:0;">
+                                                                    <table =
+border=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:c=
+ollapse;border-spacing:0px;">
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td style=3D"padding:0;Margin:0px;border-bottom:1px solid #D5D5D5;backgrou=
+nd:none;height:1px;width:100%;margin:0px;"></td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                                                           =
+                         <tr style=3D"border-collapse:collapse;">
+                                        <td align=3D"left" style=3D"padding=
+:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px;">
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0=
+pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td width=3D"560" align=
+=3D"center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                        <table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"left" style=3D"padding:0;Margin:0;">
+                                                                    <h2 sty=
+le=3D"Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:La=
+to, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:24px;=
+font-style:normal;font-weight:bold;color:#4A4A4A;text-align:center;margin-t=
+op:0;margin-bottom:0;Margin:0;">
+                                                                        Stu=
+dents of the Week
+                                                                    </h2>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr style=3D"border-collapse:collapse;"=
+>
+                                        <td align=3D"left" style=3D"padding=
+:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px;">
+                                            <!--[if mso]>
+                                            <table width=3D"560" cellpaddin=
+g=3D"0" cellspacing=3D"0">
+                                                <tr>
+                                                    <td width=3D"270" valig=
+n=3D"top">
+                                            <![endif]-->
+                                                                           =
+             <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left" a=
+lign=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-col=
+lapse:collapse;border-spacing:0px;float:left;">
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td class=3D"es-m-p0r e=
+s-m-p20b" width=3D"270" align=3D"center" style=3D"padding:0;Margin:0;">
+                                                        <table style=3D"mso=
+-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spac=
+ing:0px;background-position:left bottom;background-color:#F7F7F7;border-rad=
+ius:5px;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f7=
+f7f7">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td class=
+=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D"padding:0=
+;Margin:0;padding-left:10px;padding-right:10px;padding-top:20px;">
+                                                                    <h3 sty=
+le=3D"Margin:0;line-height:19px;mso-line-height-rule:exactly;font-family:La=
+to, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:16px;=
+font-style:normal;font-weight:bold;color:#4A4A4A;margin-top:0;margin-bottom=
+:0;Margin:0;">
+                                                                        <st=
+rong>FASTEST STUDENT</strong>
+                                                                    </h3>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"center" class=3D"es-m-txt-c" style=3D"Margin:0;padding-top:10px;padding=
+-bottom:10px;padding-left:20px;padding-right:20px;">
+                                                                    <img sr=
+c=3D"https://teachingcomemail.s3.amazonaws.com/all_brands/details/speed.png=
+" alt style=3D"display:block;border:0;outline:none;text-decoration:none;-ms=
+-interpolation-mode:bicubic;" height=3D"77">
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"center" style=3D"padding:0;Margin:0;padding-top:10px;">
+                                                                    <p styl=
+e=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-size:20px;font-fa=
+mily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;=
+color:#3295DB;">
+                                                                        <a =
+target=3D"_blank" rel=3D"noopener noreferrer" href=3D"https://teachers.typi=
+ng.com/students?utm_source=3Dtyping&utm_medium=3Dreferral&utm_campaign=3Dem=
+ail&utm_content=3Dweekly_recap/174273439" style=3D"Margin: 0; color: #3295d=
+b; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-hei=
+ght: 120%; margin: 0; padding: 0; text-align: left; text-decoration: none">
+                                                                           =
+ <strong>Muhammad Hashir</strong>
+                                                                        </a=
+>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td class=
+=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D"padding:0=
+;Margin:0;padding-bottom:15px;">
+                                                                    <p styl=
+e=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-fa=
+mily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;=
+color:#4A4A4A;">
+                                                                        <st=
+rong>
+                                                                           =
+ <span style=3D"font-size:48px;line-height:72px;">48</span>&nbsp;
+                                                                           =
+ <span style=3D"color:#4A4A4A;">wpm</span>
+                                                                        </s=
+trong>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            <td width=3D"20"></td>
+                                            <td width=3D"270" valign=3D"top=
+">
+                                            <![endif]-->
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" class=3D"es-right" align=3D"right" style=3D"mso-table-lspace:0p=
+t;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:ri=
+ght;">
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td class=3D"es-m-p0r e=
+s-m-p20b" width=3D"270" align=3D"center" style=3D"padding:0;Margin:0;">
+                                                        <table style=3D"mso=
+-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spac=
+ing:0px;background-position:left bottom;background-color:#F7F7F7;border-rad=
+ius:5px;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f7=
+f7f7">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td class=
+=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D"padding:0=
+;Margin:0;padding-left:10px;padding-right:10px;padding-top:20px;">
+                                                                    <h3 sty=
+le=3D"Margin:0;line-height:19px;mso-line-height-rule:exactly;font-family:La=
+to, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:16px;=
+font-style:normal;font-weight:bold;color:#4A4A4A;margin-top:0;margin-bottom=
+:0;Margin:0;">
+                                                                        MOS=
+T ACTIVE STUDENT
+                                                                    </h3>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"center" class=3D"es-m-txt-c" style=3D"padding:0;Margin:0;padding-top:10=
+px;padding-left:20px;padding-right:20px;">
+                                                                    <img sr=
+c=3D"https://teachingcomemail.s3.amazonaws.com/all_brands/details/time.png"=
+ alt style=3D"display:block;border:0;outline:none;text-decoration:none;-ms-=
+interpolation-mode:bicubic;" width=3D"76">
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td align=
+=3D"center" style=3D"padding:0;Margin:0;padding-top:15px;">
+                                                                    <p styl=
+e=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-size:20px;font-fa=
+mily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;=
+color:#3295DB;">
+                                                                        <a =
+target=3D"_blank" rel=3D"noopener noreferrer" href=3D"https://teachers.typi=
+ng.com/students?utm_source=3Dtyping&utm_medium=3Dreferral&utm_campaign=3Dem=
+ail&utm_content=3Dweekly_recap/174285521" style=3D"Margin: 0; color: #3295d=
+b; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-hei=
+ght: 120%; margin: 0; padding: 0; text-align: left; text-decoration: none">
+                                                                           =
+ <strong>Ali Murad</strong>
+                                                                        </a=
+>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td class=
+=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D"padding:0=
+;Margin:0;padding-bottom:15px;">
+                                                                    <p styl=
+e=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-fa=
+mily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;=
+color:#4A4A4A;">
+                                                                        <st=
+rong>
+                                                                           =
+ <span style=3D"font-size:48px;line-height:72px;">3</span>
+                                                                           =
+ <span style=3D"color:#4A4A4A;">hr </span>
+                                                                           =
+ <span style=3D"font-size:48px;">41</span>
+                                                                           =
+ <span style=3D"color:#4A4A4A;">min</span>
+                                                                        </s=
+trong>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--[if mso]>
+                                            </td>
+                                            </tr>
+                                            </table>
+                                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                                                           =
+                                                         <tr>
+                                        <td class=3D"esd-structure es-p20t =
+es-p20r es-p20l" align=3D"left" style=3D"padding-top:20px;">
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width=3D"560" c=
+lass=3D"esd-container-frame" align=3D"center" valign=3D"top">
+                                                            <table cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td ali=
+gn=3D"center" class=3D"esd-block-image">
+                                                                        <im=
+g class=3D"adapt-img" src=3D"cid:142e8ffee565121e511777dd07f2b7e3@swift.gen=
+erated" alt style=3D"display: block;" width=3D"560">
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                                                <tr style=
+=3D"border-collapse:collapse;">
+                                    <td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-top:20px;padding-left:20px;padding-right:20px;">
+                                                                           =
+                                                     <table cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table=
+-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#F=
+7F7F7;margin-top:20px;Margin-top:20px;">
+
+                                                <!-- Class Section Title --=
+>
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td align=3D"left" styl=
+e=3D"padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20=
+px;">
+                                                        <table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td width=
+=3D"560" align=3D"center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                                    <table =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspac=
+e:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td align=3D"center" style=3D"padding:0;Margin:0;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+24px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:36px;color:#4A4A4A;">
+                                                                           =
+         <strong> SMIT B22's Weekly Stats</strong>
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Class Overall Rollup V=
+alues -->
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td style=3D"Margin:0;p=
+adding-left:10px;padding-right:10px;padding-top:20px;padding-bottom:10px;ba=
+ckground-position:left bottom;background-color:transparent;" bgcolor=3D"tra=
+nsparent" align=3D"left">
+                                                        <!--[if mso]>
+                                                        <table width=3D"580=
+" cellpadding=3D"0" cellspacing=3D"0">
+                                                            <tr>
+                                                                <td width=
+=3D"173" valign=3D"top">
+                                                        <![endif]-->
+                                                        <table class=3D"es-=
+left" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" style=3D"mso-table=
+-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0p=
+x;float:left;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td class=
+=3D"es-m-p0r es-m-p20b" width=3D"173" align=3D"center" style=3D"padding:0;m=
+argin-top:0;margin-bottom:0;Margin:0;">
+                                                                    <table =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate=
+;border-spacing:0px;background-position:left bottom;background-color:#FFFFF=
+F;border-radius:5px;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#ffffff">
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td class=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D=
+"padding:0;margin-top:0;margin-bottom:0;Margin:0;padding-left:10px;padding-=
+right:10px;padding-top:20px;">
+                                                                           =
+     <h3 style=3D"line-height:17px;mso-line-height-rule:exactly;font-family=
+:Lato, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:14=
+px;font-style:normal;font-weight:bold;color:#4A4A4A;margin-top:0;margin-bot=
+tom:0;Margin:0;">
+                                                                           =
+         <strong>AVERAGE SPEED</strong>
+                                                                           =
+     </h3>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td class=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D=
+"margin-top:0;margin-bottom:0;Margin:0;padding-bottom:10px;padding-left:10p=
+x;padding-right:10px;padding-top:20px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#4A4A4A;">
+                                                                           =
+         <strong>
+                                                                           =
+             <span style=3D"font-size:40px;">21</span>
+                                                                           =
+             <span style=3D"color:#A9A9A9;">WPM</span>
+                                                                           =
+         </strong>
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                                <td class=
+=3D"es-hidden" width=3D"10" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;"></td>
+                                                            </tr>
+                                                        </table>
+                                                        <!--[if mso]>
+                                                        </td>
+                                                        <td width=3D"174" v=
+align=3D"top">
+                                                        <![endif]-->
+                                                        <table class=3D"es-=
+left" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" style=3D"mso-table=
+-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0p=
+x;float:left;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td class=
+=3D"es-m-p0r es-m-p20b" width=3D"174" align=3D"center" style=3D"padding:0;m=
+argin-top:0;margin-bottom:0;Margin:0;">
+                                                                    <table =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate=
+;border-spacing:0px;background-position:left bottom;background-color:#FFFFF=
+F;border-radius:5px;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#ffffff">
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td class=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D=
+"padding:0;margin-top:0;margin-bottom:0;Margin:0;padding-left:10px;padding-=
+right:10px;padding-top:20px;">
+                                                                           =
+     <h3 style=3D"margin-top:0;margin-bottom:0;Margin:0;line-height:17px;ms=
+o-line-height-rule:exactly;font-family:Lato, helvetica, 'helvetica neue', a=
+rial, verdana, sans-serif;font-size:14px;font-style:normal;font-weight:bold=
+;color:#4A4A4A;margin-top:0;margin-bottom:0;Margin:0;">
+                                                                           =
+         <strong>AVERAGE ACCURACY</strong>
+                                                                           =
+     </h3>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td class=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D=
+"margin-top:0;margin-bottom:0;Margin:0;padding-bottom:10px;padding-left:10p=
+x;padding-right:10px;padding-top:20px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#4A4A4A;">
+                                                                           =
+         <strong>
+                                                                           =
+             <span style=3D"font-size:40px;">93</span>
+                                                                           =
+             <span style=3D"color:#A9A9A9;">%</span>
+                                                                           =
+         </strong>
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!--[if mso]>
+                                                        </td>
+                                                        <td width=3D"10"></=
+td>
+                                                        <td width=3D"173" v=
+align=3D"top">
+                                                        <![endif]-->
+                                                        <table class=3D"es-=
+right" cellspacing=3D"0" cellpadding=3D"0" align=3D"right" style=3D"mso-tab=
+le-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:=
+0px;float:right;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td class=
+=3D"es-m-p0r es-m-p20b" width=3D"173" align=3D"center" style=3D"padding:0;M=
+argin:0;">
+                                                                    <table =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate=
+;border-spacing:0px;background-position:left bottom;background-color:#FFFFF=
+F;border-radius:5px;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#ffffff">
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td class=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D=
+"padding:0;Margin:0;padding-left:10px;padding-right:10px;padding-top:20px;"=
+>
+                                                                           =
+     <h3 style=3D"line-height:17px;mso-line-height-rule:exactly;font-family=
+:Lato, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:14=
+px;font-style:normal;font-weight:bold;color:#4A4A4A;margin-top:0;margin-bot=
+tom:0;Margin:0;">
+                                                                           =
+         <strong>TOTAL TIME TYPED</strong>
+                                                                           =
+     </h3>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td class=3D"es-m-txt-c" align=3D"center" bgcolor=3D"transparent" style=3D=
+"Margin:0;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-=
+top:20px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:10px;-webkit-text-size-adjust:n=
+one;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;f=
+ont-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height=
+:24px;color:#4A4A4A;">
+                                                                           =
+         <strong>
+                                                                           =
+             <span style=3D"font-size:30px;">17h 17m</span>
+                                                                           =
+         </strong>
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!--[if mso]>
+                                                        </td>
+                                                        </tr>
+                                                        </table>
+                                                        <![endif]-->
+                                                    </td>
+                                                </tr>
+
+                                                <!-- This Week's Top Studen=
+ts Table -->
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <td align=3D"left" styl=
+e=3D"padding:0;Margin:0;padding-left:10px;padding-right:10px;">
+                                                        <table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-right:1px solid #3295DB;bor=
+der-spacing:0px;">
+                                                            <tr style=3D"bo=
+rder-collapse:collapse;">
+                                                                <td width=
+=3D"580" align=3D"center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                                    <table =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspac=
+e:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;bord=
+er-left:1px solid #3295DB;border-bottom:1px solid #3295DB;background-color:=
+#FFFFFF;" bgcolor=3D"#ffffff">
+                                                                        <th=
+ead>
+                                                                        <tr=
+ style=3D"border-collapse:collapse;">
+                                                                           =
+ <td colspan=3D"5" background=3D"#F2F8FE" style=3D"padding:0;Margin:0;backg=
+round-color:#F2F8FE;border-left:1px solid #3295DB;border-top:1px solid #329=
+5DB;color:#3295DB;font-size:20px;padding-top:10px;padding-bottom:10px;text-=
+align:center;">
+                                                                           =
+     <strong>Last Week's Top Typists</strong>
+                                                                           =
+     <p align=3D"center" style=3D"margin-top:0;margin-bottom:0;Margin:0;-we=
+bkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:e=
+xactly;font-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica,=
+ sans-serif;line-height:24px;color:#3295DB;text-align:center;">
+                                                                           =
+         <a target=3D"_blank" rel=3D"noopener noreferrer" href=3D"https://t=
+eachers.typing.com/classes?utm_source=3Dtyping&utm_medium=3Dreferral&utm_ca=
+mpaign=3Demail&utm_content=3Dweekly_recap/61427468" style=3D"Margin: 0; col=
+or: #3295db; font-family: Helvetica, Arial, sans-serif; font-weight: normal=
+; line-height: 120%; margin: 0; padding: 0; text-align: left; text-decorati=
+on: none">
+                                                                           =
+             SMIT B22
+                                                                           =
+         </a>
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        </t=
+head>
+                                                                        <tr=
+ background=3D"#3295DB" style=3D"border-collapse:collapse;background-color:=
+#3295DB;">
+                                                                           =
+ <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0;Margin:=
+0;padding-top:10px;padding-bottom:10px;padding-left:10px;">
+
+
+
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0;Margin:=
+0;padding-top:10px;padding-bottom:10px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#FFFFFF;font-weight:bold;">
+                                                                           =
+         Fastest
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:0;Margin=
+:0;padding-top:10px;padding-bottom:10px;padding-right:10px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#FFFFFF;font-weight:bold;">
+                                                                           =
+         Speed
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;margin-t=
+op:0;margin-bottom:0;Margin:0;padding-top:10px;padding-bottom:10px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#FFFFFF;font-weight:bold;">
+                                                                           =
+         Accuracy
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;margin-t=
+op:0;margin-bottom:0;Margin:0;padding-top:10px;padding-bottom:10px;padding-=
+right:10px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#FFFFFF;font-weight:bold;">
+                                                                           =
+         Time
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                           =
+                                                                           =
+                                                                           =
+   <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 1
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 Muhammad Hashir
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>48wpm</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 95%
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                  46m
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+    <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 2
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 razaque-dev
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>34wpm</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 99%
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                  23m
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+    <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 3
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 Sardar Chandio
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>34wpm</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 95%
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                  5m
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+    <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 4
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 sabeer_alam
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>32wpm</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 97%
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                  20m
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+    <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 5
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 Zayan Akbar Khan
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>31wpm</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 96%
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                  1m
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                               <tr background=3D"#3295DB" style=3D"border-c=
+ollapse:collapse;background-color:#3295DB;">
+                                                                           =
+ <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0;Margin:=
+0;padding-top:10px;padding-bottom:10px;padding-left:10px;">
+                                                                           =
+    =20
+                                                                           =
+    =20
+                                                                           =
+    =20
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0;Margin:=
+0;padding-top:10px;padding-bottom:10px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#FFFFFF;font-weight:bold;">
+                                                                           =
+         Most Active
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;margin-t=
+op:0;margin-bottom:0;Margin:0;padding-top:10px;padding-bottom:10px;padding-=
+right:10px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#FFFFFF;font-weight:bold;">
+                                                                           =
+         Speed
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;margin-t=
+op:0;margin-bottom:0;Margin:0;padding-top:10px;padding-bottom:10px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#FFFFFF;font-weight:bold;">
+                                                                           =
+         Accuracy
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:0;Margin=
+:0;padding-top:10px;padding-bottom:10px;padding-right:10px;">
+                                                                           =
+     <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:=
+16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:24px;color:#FFFFFF;font-weight:bold;">
+                                                                           =
+         Time
+                                                                           =
+     </p>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                           =
+                                                                           =
+                                                                           =
+   <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">1</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">Ali Murad</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">24wpm</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">89%</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>3h 41m</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+    <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">2</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">kaleemullah--</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">15wpm</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">95%</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>3h 19m</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+    <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">3</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">monsori family </p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">22wpm</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">95%</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>1h 51m</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+    <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">4</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">umar qureshi1329</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">14wpm</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">89%</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>1h 25m</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+    <tr style=3D"border-collapse:collapse;">
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">5</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"left" style=3D"padding:0;margin-top:0;margin-bottom:0=
+;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">muhammad-mahad</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;pa=
+dding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">29wpm</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" class=3D"es-mobile-hidden" style=3D"padding:0;=
+margin-top:0;margin-bottom:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">96%</p>
+                                                                           =
+         </td>
+                                                                           =
+         <td align=3D"right" style=3D"padding:0;margin-top:0;margin-bottom:=
+0;Margin:0;padding-top:5px;padding-bottom:5px;padding-right:10px;">
+                                                                           =
+             <p style=3D"margin-top:0;margin-bottom:0;Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-size:16px;font-family:Lato, arial, 'helvetica neue', helvetica, sans-ser=
+if;line-height:24px;color:#4A4A4A;">
+                                                                           =
+                 <strong>1h 18m</strong>
+                                                                           =
+             </p>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                   <tr style=3D"border-collapse:collapse;">
+                                                                           =
+     <td colspan=3D"5" align=3D"center" bgcolor=3D"transparent" style=3D"pa=
+dding:10px;Margin:0;border-top:1px solid #D5D5D5;">
+                                                                           =
+         <span class=3D"msohide es-button-border" style=3D"border-style:sol=
+id;border-color:transparent;background:#F9C95E;border-width:0px;display:inl=
+ine-block;border-radius:10px;width:auto;mso-hide:all;">
+                                                                           =
+             <a href=3D"https://teachers.typing.com/classes/" class=3D"es-b=
+utton" target=3D"_blank" style=3D"mso-style-priority:100 !important;text-de=
+coration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-l=
+ine-height-rule:exactly;font-family:Lato, helvetica, 'helvetica neue', aria=
+l, verdana, sans-serif;font-size:14px;color:#705724;border-style:solid;bord=
+er-color:#F9C95E;border-width:10px 20px 10px 20px;display:inline-block;back=
+ground:#F9C95E;border-radius:10px;font-weight:bold;font-style:normal;line-h=
+eight:17px;width:auto;text-align:center;">
+                                                                           =
+             See 13+ More
+                                                                           =
+             </a>
+                                                                           =
+         </span>
+                                                                           =
+     </td>
+                                                                           =
+ </tr>
+                                                                           =
+                                                                 </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                                                           =
+ </td>
+                                </tr>
+
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-top:20px;padding-left:20px;padding-right:20px;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"560" align=3D"=
+center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:20px;padding-bottom:20px;">
+                                                                <table bord=
+er=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collaps=
+e;border-spacing:0px;">
+                                                                    <tr sty=
+le=3D"border-collapse:collapse;">
+                                                                        <td=
+ style=3D"padding:0;Margin:0px 0px 0px 0px;border-bottom:1px solid #CCCCCC;=
+background:none;height:1px;width:100%;margin:0px;"></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" bgcolor=3D"#ffffff" =
+style=3D"padding:0;Margin:0;padding-bottom:10px;background-color:#FFFFFF;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"600" align=3D"=
+center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;background-image:url=
+(https://teachingcomemail.s3.amazonaws.com/all_brands/details/global-fun-bg=
+.jpg);background-position:center top;background-repeat:no-repeat;" backgrou=
+nd=3D"https://teachingcomemail.s3.amazonaws.com/all_brands/details/global-f=
+un-bg.jpg">
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:25px;">
+                                                                <h2 style=
+=3D"Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:Lato=
+, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:24px;fo=
+nt-style:normal;font-weight:bold;color:#A9A9A9;text-align:center;margin-top=
+:0;margin-bottom:0;Margin:0;">
+                                                                    <strong=
+>In the last week,</strong>
+                                                                </h2>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:5px;">
+                                                                <h1 style=
+=3D"Margin:0;line-height:48px;mso-line-height-rule:exactly;font-family:Lato=
+, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:48px;fo=
+nt-style:normal;font-weight:bold;color:#4A4A4A;text-align:center;margin-top=
+:0;margin-bottom:0;Margin:0;">
+                                                                    <strong=
+>3,103,065
+                                                                        <sp=
+an style=3D"font-size:24px;line-height:24px;">students</span>
+                                                                    </stron=
+g>
+                                                                </h1>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:5px;">
+                                                                <h2 style=
+=3D"Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:Lato=
+, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:24px;fo=
+nt-style:normal;font-weight:bold;color:#A9A9A9;text-align:center;margin-top=
+:0;margin-bottom:0;Margin:0;">
+                                                                    <strong=
+>typed</strong>
+                                                                </h2>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:5px;">
+                                                                <h1 style=
+=3D"Margin:0;line-height:48px;mso-line-height-rule:exactly;font-family:Lato=
+, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:48px;fo=
+nt-style:normal;font-weight:bold;color:#4A4A4A;text-align:center;margin-top=
+:0;margin-bottom:0;Margin:0;">
+                                                                    <strong=
+>416,711,433
+                                                                        <sp=
+an style=3D"font-size:24px;line-height:24px;">words</span>
+                                                                    </stron=
+g>
+                                                                </h1>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:5px;padding-bottom:5px;">
+                                                                <h2 style=
+=3D"Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:Lato=
+, helvetica, 'helvetica neue', arial, verdana, sans-serif;font-size:24px;fo=
+nt-style:normal;font-weight:bold;color:#A9A9A9;text-align:center;margin-top=
+:0;margin-bottom:0;Margin:0;">
+                                                                    <strong=
+>on Typing.com</strong>
+                                                                </h2>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-top:0px;padding-left:20px;padding-right:20px;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"560" align=3D"=
+center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:20px;padding-bottom:20px;">
+                                                                <table bord=
+er=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collaps=
+e;border-spacing:0px;">
+                                                                    <tr sty=
+le=3D"border-collapse:collapse;">
+                                                                        <td=
+ style=3D"padding:0;Margin:0px 0px 0px 0px;border-bottom:1px solid #CCCCCC;=
+background:none;height:1px;width:100%;margin:0px;"></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                               =20
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-top:20px;padding-left:20px;padding-right:20px;">
+                                        <div style=3D"border-radius: 4px; o=
+verflow: hidden; border: 1px solid #F4CA66; background-color: #FDF6E4;">
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0=
+pt;border-collapse:collapse;border-spacing:0px;">
+                                                <tr style=3D"border-collaps=
+e:collapse;">
+                                                    <!-- Left Column: Image=
+ -->
+                                                    <td class=3D"es-adapt-t=
+d" align=3D"center" style=3D"padding:0;Margin:0;">
+                                                        <img src=3D"https:/=
+/teachingcomemail.s3.us-east-1.amazonaws.com/typing_com/logos/PLUS-weekly-e=
+mail.png" alt=3D"PLUS"/>
+                                                    </td>
+                                                    <!-- Right Column: Text=
+ -->
+                                                    <td class=3D"es-adapt-t=
+d es-m-txt-c" align=3D"left" style=3D"padding-top:20px;padding-bottom:20px;=
+Margin:0;">
+                                                        <p style=3D"Margin:=
+0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-r=
+ule:exactly;font-size:24px;font-family:Lato, arial, 'helvetica neue', helve=
+tica, sans-serif;line-height:24px;color:#414141;font-weight: bold;">
+                                                            Learn All About=
+ PLUS
+                                                        </p>
+                                                        <p style=3D"color: =
+#4A4A4A; font-size: 16px; line-height: 24px; margin-top: 8px;">Unleash the =
+Power of Personalized Learning with Our PLUS Edition</p>
+                                                        <a href=3D"https://=
+www.typing.com/plus" style=3D"display: inline-block; text-decoration: none;=
+ background-color: #F4CA66; padding: 12px 18px; border: none; color: #91712=
+7; font-size: 16px; font-weight: bold;">Learn more</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" style=3D"padding:0;M=
+argin:0;padding-top:20px;padding-left:20px;padding-right:20px;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"560" align=3D"=
+center" valign=3D"top" style=3D"padding:0;Margin:0;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;padding-top:20px;padding-bottom:20px;">
+                                                                <table bord=
+er=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collaps=
+e;border-spacing:0px;">
+                                                                    <tr sty=
+le=3D"border-collapse:collapse;">
+                                                                        <td=
+ style=3D"padding:0;Margin:0px 0px 0px 0px;border-bottom:1px solid #CCCCCC;=
+background:none;height:1px;width:100%;margin:0px;"></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-foot=
+er" align=3D"center" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bor=
+der-collapse:collapse;border-spacing:0px;table-layout:fixed !important;widt=
+h:100%;background-color:transparent;background-repeat:repeat;background-pos=
+ition:center top;">
+                    <tr style=3D"border-collapse:collapse;">
+                        <td align=3D"center" style=3D"padding:0;Margin:0;ma=
+rgin-bottom:0px;margin-top: 0px;">
+                            <table class=3D"es-footer-body" width=3D"600" c=
+ellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff" align=3D"center" sty=
+le=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bo=
+rder-spacing:0px;background-color:#FFFFFF;">
+                                <tr style=3D"border-collapse:collapse;">
+                                    <td align=3D"left" style=3D"padding:0;M=
+argin:0;margin-bottom:0px;margin-top: 0px;">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;">
+                                            <tr style=3D"border-collapse:co=
+llapse;">
+                                                <td width=3D"600" align=3D"=
+center" valign=3D"top" style=3D"padding:0;Margin:0;margin-bottom:0px;margin=
+-top: 0px;">
+                                                    <table cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">
+                                                        <tr style=3D"border=
+-collapse:collapse;">
+                                                            <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;margin-bottom:0px;margin-top: 0px;padding=
+-bottom:20px;padding-left:20px;padding-right:20px;">
+
+
+
+
+
+                                                                <p></p>
+                                                                <p style=3D=
+"Margin:0;margin-bottom:0px;margin-top: 0px;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-f=
+amily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px=
+;color:#888888;">
+                                                                    Make su=
+re to add
+                                                                    <a targ=
+et=3D"_blank" href=3D"mailto:support@typing.com" style=3D"-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-fa=
+mily:Lato, arial, 'helvetica neue', helvetica, sans-serif;font-size:16px;te=
+xt-decoration:underline;color:#3295DB;">
+                                                                        sup=
+port@typing.com
+                                                                    </a>
+                                                                    in your=
+ address book so our emails don=E2=80=99t go to your spam folder,you don=E2=
+=80=99t want to miss out on any important news from Typing.com!
+                                                                </p>
+                                                                <p style=3D=
+"Margin:0;margin-bottom:0px;margin-top: 0px;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-f=
+amily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px=
+;color:#888888;">
+                                                                    <br>
+                                                                </p>
+                                                                <p style=3D=
+"Margin:0;margin-bottom:0px;margin-top: 0px;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-f=
+amily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px=
+;color:#888888;">
+                                                                    This em=
+ail was sent to
+                                                                    <a targ=
+et=3D"_blank" href=3D"mailto:shehzaddiqbal@gmail.com" style=3D"-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-family:Lato, arial, 'helvetica neue', helvetica, sans-serif;font-size:16=
+px;text-decoration:underline;color:#3295DB;">
+                                                                        she=
+hzaddiqbal@gmail.com
+                                                                    </a>. Y=
+ou received this email because you are registered with Typing.com.
+                                                                </p>
+                                                                <p style=3D=
+"Margin:0;margin-bottom:0px;margin-top: 0px;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-f=
+amily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px=
+;color:#888888;">
+                                                                    <br>
+                                                                    <a href=
+=3D"<%asm_global_unsubscribe_raw_url%>">
+                                                                        Uns=
+ubscribe here
+                                                                    </a>
+                                                                </p>
+                                                                <p style=3D=
+"Margin:0;margin-bottom:0px;margin-top: 0px;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-f=
+amily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px=
+;color:#888888;">
+                                                                    <br>
+                                                                </p>
+                                                                <p style=3D=
+"Margin:0;margin-bottom:0px;margin-top: 0px;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-f=
+amily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px=
+;color:#888888;">
+                                                                    Typing.=
+com, PO Box 9241 San Juan, PR 00908
+                                                                </p>
+                                                                <p style=3D=
+"Margin:0;margin-bottom:0px;margin-top: 0px;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-f=
+amily:Lato, arial, 'helvetica neue', helvetica, sans-serif;line-height:24px=
+;color:#888888;">
+                                                                    =C2=A9 =
+2026 Teaching.com
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<img src=3D"https://u7505650.ct.sendgrid.net/wf/open?upn=3Du001.f1wfMRVB9MB=
+0OIgExMlXNpvdrdOos5bly3GvTBHxm8dVqJC5SwLyALOABn-2BAJqNldS5FK2JR2hOgF45uib1i=
+Fi-2Fh6SvSCy-2FynMLBiL60QNv-2BCXvvmngbqTP-2B83lE-2FKgNdJFqYZLBIoyTN0gwVG4Eh=
+i81iAFxddKI-2FV-2BQ5oVWPZr-2F2i1YY-2FlwCfQA7x9DKzX29OOg10u0qD4ZzqwH12Kc22Ni=
+k6SWSpa1aFx70GkqFr0-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" styl=
+e=3D"height:1px !important;width:1px !important;border-width:0 !important;m=
+argin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important=
+;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !import=
+ant;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+
+--_=_swift_1777192511_0562256edad7bd372c6b19d40bd4f36f_=_
+Content-Type: application/octet-stream; name=mychart.png
+Content-Transfer-Encoding: base64
+Content-ID: <142e8ffee565121e511777dd07f2b7e3@swift.generated>
+Content-Disposition: inline; filename=mychart.png
+
+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
+
+--_=_swift_1777192511_0562256edad7bd372c6b19d40bd4f36f_=_--
+

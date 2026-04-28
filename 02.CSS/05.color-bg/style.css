@@ -1,0 +1,42 @@
+ul {
+  /* border ki property inherit nhi hoti */
+  border: 2px solid red;
+
+  /* ye properties inherit hoti hyn */
+  color: red;
+  /* text-transform: uppercase; */
+}
+
+body {
+  /* background-color: ed8e3c; */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Bachelor%27s_button%2C_Basket_flower%2C_Boutonniere_flower%2C_Cornflower_-_3.jpg/1280px-Bachelor%27s_button%2C_Basket_flower%2C_Boutonniere_flower%2C_Cornflower_-_3.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  /* color: rgb(115, 165, 202); */
+  /* 
+  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  color: #ffffff;
+  color: #000;
+  color: #73a5ca; */
+
+
+}
+
+ul {
+  /* text ko blur nhi karna hota */
+  background-color: rgba(255, 199, 30, 0.3);
+ 
+  backdrop-filter: blur(2px);
+  /* opacity: 0.3; */
+
+  color: #a3d00e;
+}
+
+/* https://vscodethemes.com/ */
+/* https://colorhunt.co/ */
