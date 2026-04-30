@@ -1,8 +1,48 @@
 /* https://fonts.google.com/ */
 
+@import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+h1 {
+  font-family: "Mea Culpa", sans-serif;
+  font-weight: 100;
+}
 
-* {
-  font-family: "Poppins", sans-serif;
+.urdu-para {
+  direction: rtl;
+  font-family: "Noto Nastaliq Urdu", serif;
+}
+
+.new-para {
+  /* justify para ki ending ko sedha kr deta hy */
+  /* center | left | right | justify */
+  /* text-align: center; */
+  font-size: 20px;
+  font-style: italic;
+  /* font-weight: 900; */
+  /* line-height: 40px; */
+  /* word-spacing: 20px; */
+  /* letter-spacing: 20px; */
+  text-transform: capitalize;
+  text-indent: 40px;
+}
+
+/* .new-para:hover {
+  color: red;
+  font-size: 22px;
+} */
+p::selection {
+
+  background-color: orange;
+  color: white;
+}
+
+.my-link {
+  color: green;
+  /* text-decoration: none; */
+}
+.my-link:visited {
+  color: red;
+}
+.my-link:hover{
+  border: 2px solid red;
 }
