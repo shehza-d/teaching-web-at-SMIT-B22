@@ -1,0 +1,54 @@
+a[abc="hello"] {
+  color: red;
+}
+
+/* Shadow Code */
+/* div{
+  background-color: white;
+  height: 100px;
+  width: 200px;
+             x    y   blur
+  box-shadow: 0px 0px 20px gray;
+  border: 10px solid red;
+} */
+
+div {
+  background-color: aqua;
+  height: 100px;
+  width: 200px;
+  /*          x    y */
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+h2 {
+  /* width: 250px;
+  border-top: 5px solid red;
+  border-left: 10px solid yellow;
+  border-bottom: 20px solid green; */
+  /* box-shadow: 2px 2px 5px red; */
+  /* text-shadow: 0.5px 0.5px red; */
+  /* text-shadow: 0.5px 0.5px 2px blue; */
+}
+
+/* Button Code */
+/*  ----------------------------------------------- */
+
+/* https://getcssscan.com/css-buttons-examples */
+/* button {
+}
+
+button:hover {
+    background-color: antiquewhite;
+}
+
+button:active {
+  background-color: purple;
+  border: none;
+}
+
+button:focus {
+  border: 2px solid orange;
+  outline: none;
+} */
