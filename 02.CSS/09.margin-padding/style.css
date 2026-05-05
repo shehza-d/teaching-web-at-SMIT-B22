@@ -1,0 +1,31 @@
+
+* {
+    margin: 0;
+}
+
+h1 {
+    border: 2px solid red;
+
+    /* margin wo space hy jo box ky bahar use hoti hy  */
+    margin: 50px;
+   
+    /* ye padding box ky andar ka space hy */
+    padding: 20px;
+
+
+}
+
+
+button {
+    background-color: aqua;
+    border-radius: 9999px;
+    margin: 50px;
+    /* padding: 20px; */
+
+    /* padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px; */
+
+    padding: 10px 50px;
+}
