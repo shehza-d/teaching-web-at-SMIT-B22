@@ -1,6 +1,7 @@
 /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -27,9 +28,11 @@
 }
 #box2 {
   background-color: blue;
+  /* order: 2; */
 }
 #box3 {
   background-color: orange;
+  /* order: 1; */
 }
 #box4 {
   background-color: brown;
@@ -38,8 +41,17 @@
 /* class code below */
 .container {
   display: flex;
-  /* flex-direction: column-reverse;
-  flex-wrap: wrap;
+  /* flex-direction: row;
+  justify-content: space-between;
+  align-items: end; */
+  /*
   justify-content: center;
   align-items: stretch; */
+  /* flex-wrap: wrap; */
+  /* align-content: start; */
+  /*  align-content ONLY works with flex-wrap */
+  /* gap: 50px; dono row and column ka gap*/
+  /* column-gap: 300px; column ky darmiyan ka gap */
+  /* row-gap: 100px; */
+  /* justify-content: space-between; */
 }
