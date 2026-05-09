@@ -49,6 +49,7 @@ Learning keyboard shortcuts is one of the fastest ways to improve your efficienc
 ### ⚡ Productivity
 
 - **Downloads** → `Ctrl + J`
+- **Console** → `Ctrl + Shift + J`
 - **History** → `Ctrl + H`
 - **Bookmark page** → `Ctrl + D`
 - **Open bookmarks bar** → `Ctrl + Shift + B`
