@@ -10,6 +10,7 @@
 
 ## 🛠️ Tools (Very Useful)
 
+- ✅ [Color combinations](https://colorhunt.co/)
 - ✅ [Shadow Examples](https://getcssscan.com/css-box-shadow-examples)
 - ✅ [Button Templates](https://getcssscan.com/css-buttons-examples)
 - ✅ [CSS Gradient](https://cssgradient.io/)
@@ -39,7 +40,7 @@
 
 ## 🧪 Practice / Assignment
 
-- 💻 todo
+- 💻 [assignment repo](https://github.com/shehza-d/smit-assignments/tree/main/02.CSS)
 
 ## 🚀 For Better Understanding
 
