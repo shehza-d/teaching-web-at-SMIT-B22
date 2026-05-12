@@ -6,7 +6,7 @@
 
 .container {
   background-color: bisque;
-  min-height: 80vh;
+  min-height: 99vh;
   border: 5px solid black;
   margin: 2px;
   padding: 2px;
@@ -20,32 +20,48 @@
 
   color: white;
   font-size: 25px;
+  /* flex-grow: 1; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #box1 {
   background-color: aqua;
   color: black;
+  /* order: 1; */
+  /* flex-grow: 1; */
+  /* margin: 50px; */
+  flex-shrink: 1;
 }
 #box2 {
   background-color: blue;
-  /* order: 2; */
+  /* order: -1; */
+  /* flex-grow: 3; */
+  flex-shrink: 0;
 }
 #box3 {
   background-color: orange;
   /* order: 1; */
+  /* flex-grow: 2; */
+  align-self: center;
 }
 #box4 {
   background-color: brown;
+  /* flex-grow: 1; */
+  flex-shrink: 10;
 }
 
 /* class code below */
 .container {
   display: flex;
-  /* flex-direction: row;
-  justify-content: space-between;
-  align-items: end; */
   /*
-  justify-content: center;
+  align-items: end; */
+  /* flex-direction:row-reverse ; */
+  /* align-items:  end; */
+  justify-content: space-around;
+  /*
   align-items: stretch; */
   /* flex-wrap: wrap; */
   /* align-content: start; */
@@ -53,5 +69,4 @@
   /* gap: 50px; dono row and column ka gap*/
   /* column-gap: 300px; column ky darmiyan ka gap */
   /* row-gap: 100px; */
-  /* justify-content: space-between; */
 }
