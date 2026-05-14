@@ -1,0 +1,67 @@
+.box {
+  background-color: aquamarine;
+  height: 50px;
+  width: 50px;
+  border: 2px solid blue;
+
+  position: sticky;
+
+  /* left: 20px; */
+  /* right: 50px; */
+  top: 0px;
+  /* right: 500px; */
+}
+.parent {
+  border: 2px solid red;
+  margin: 20px;
+  height: 400px;
+  width: 80%;
+  position: relative;
+}
+
+.hello {
+  border: 2px solid red;
+  width: 70%;
+  position: relative;
+}
+
+.hello > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: gray;
+
+  z-index: 1;
+}
+
+.boxn {
+  height: 80px;
+  width: 80px;
+  border: 2px solid red;
+  margin-top: -30px;
+}
+
+.box1 {
+  background-color: aquamarine;
+  margin-left: 10px;
+}
+.box2 {
+  background-color: orange;
+  z-index: 3;
+  position: relative;
+  margin-left: 30px;
+
+}
+.box3 {
+  background-color: yellowgreen;
+  margin-left: 60px;
+  z-index: 1;
+  position: relative;
+}
+.box4 {
+  background-color: purple;
+  margin-left: 90px;
+  position: relative;
+  z-index: 2;
+}
+/* When using position: relative, absolute, fixed, or sticky, the properties top, right, bottom, and left are known as offset */
