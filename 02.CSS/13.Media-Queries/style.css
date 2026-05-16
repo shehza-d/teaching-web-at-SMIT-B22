@@ -1,0 +1,54 @@
+body {
+  /* background-color: aqua; */
+}
+
+h1 {
+  font-size: 12px;
+}
+
+h1 {
+  display: none;
+}
+
+
+
+footer {
+    border: 3px solid red;
+    height: 150px;
+    padding: 5px;
+
+    display: flex;
+    /* gap: 25px; */
+}
+footer > div {
+    border: 1px solid green;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 500px) {
+  h1 {
+    display: block;
+    font-size: 192px;
+  }
+  body {
+    /* background-color: red; */
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    /* background-color: purple; */
+  }
+}
+
