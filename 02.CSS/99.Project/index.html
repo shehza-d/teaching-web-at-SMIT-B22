@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .navbar {
+        display: flex;
+        border: 2px solid red;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .navbar > div {
+        display: none;
+        gap: 46px;
+        border: 2px solid green;
+        align-items: baseline;
+      }
+      .navbar button {
+        border-radius: 5.95px;
+        background-color: #75bf7a;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+      }
+      section {
+        border: 2px solid green;
+        height: 88vh;
+        /* display: flex; */
+        padding: 5px;
+
+        display: flex;
+        /* flex-direction: row; */
+      }
+      section > div {
+        width: 50%;
+        border: 2px solid red;
+      }
+
+      .hero-section-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero-section-text {
+        /* margin-left: 100px; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction: column;
+      }
+
+      @media (min-width: 800px) {
+        i {
+          display: none !important;
+        }
+        .navbar > div {
+          display: flex;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="./Group 3702.png" alt="" />
+
+      <div>
+        <a href="#">Home</a>
+        <a href="#">How tere works</a>
+        <a href="#">Tere benefits</a>
+
+        <button>Help Center</button>
+      </div>
+      <i class="fa-solid fa-bars"></i>
+    </nav>
+
+    <section>
+      <div class="hero-section-text">
+        <h2>DOWNLOAD APP, SAVE MONEY, MAKE FRIENDS!</h2>
+        <p>
+          Its simple and its free. Play your part in reducing Carbon Footprint
+          and help Mother Nature to sustain its beauty. So what are you waiting
+          for ? Lets ride together
+        </p>
+        <div>
+          <button>DOWNLOAD</button>
+          <button>DOWNLOAD</button>
+        </div>
+      </div>
+      <div class="hero-section-img">
+        <img src="./Group 78.png" width="553" alt="" />
+      </div>
+    </section>
+  </body>
+</html>
