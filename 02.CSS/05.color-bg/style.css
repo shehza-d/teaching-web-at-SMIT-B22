@@ -24,14 +24,12 @@ h1 {
   color: #ffffff;
   color: #000;
   color: #73a5ca; */
-
-
 }
 
 ul {
   /* text ko blur nhi karna hota */
   background-color: rgba(255, 199, 30, 0.3);
- 
+
   backdrop-filter: blur(2px);
   /* opacity: 0.3; */
 

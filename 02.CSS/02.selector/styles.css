@@ -8,10 +8,10 @@
    border: 1px solid blue;
 } */
 p > a {
-    color: red;
-    border: 2px solid blue;
-    }
-    /* 
+  color: red;
+  border: 2px solid blue;
+}
+/* 
 
 .smit > span  {
     background-color: yellow;
@@ -28,5 +28,5 @@ button + a {
 }
 
 h1 {
-    color: yellow;
+  color: yellow;
 }

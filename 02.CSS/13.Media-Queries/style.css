@@ -10,29 +10,19 @@ h1 {
   display: none;
 }
 
-
-
 footer {
-    border: 3px solid red;
-    height: 150px;
-    padding: 5px;
+  border: 3px solid red;
+  height: 150px;
+  padding: 5px;
 
-    display: flex;
-    /* gap: 25px; */
+  display: flex;
+  /* gap: 25px; */
 }
 footer > div {
-    border: 1px solid green;
-
+  border: 1px solid green;
 }
 
-
-
-
-
 /* todo */
-
-
-
 
 @media (min-width: 500px) {
   h1 {
@@ -48,4 +38,3 @@ footer > div {
     /* background-color: purple; */
   }
 }
-

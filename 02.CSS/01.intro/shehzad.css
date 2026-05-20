@@ -1,5 +1,5 @@
 * {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* 238 */
@@ -10,8 +10,6 @@ h1 {
   text-decoration: underline;
 }
 /* , ky sath ak se zada selector bhi aasagty hyn */
-
-
 
 /* dot . is for class */
 /* hash # is for id */

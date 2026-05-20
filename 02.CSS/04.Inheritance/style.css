@@ -1,19 +1,18 @@
 div {
-    border: 2px solid red;
-    font-family: sans-serif;
-    /* color: red; */
+  border: 2px solid red;
+  font-family: sans-serif;
+  /* color: red; */
 }
 
-a  {
-    color: inherit;
+a {
+  color: inherit;
 }
-
 
 div p {
-    border: inherit;
+  border: inherit;
 }
 
 body {
-    background-color: black;
-    color: aqua;
+  background-color: black;
+  color: aqua;
 }

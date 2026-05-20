@@ -1,9 +1,9 @@
 input::placeholder {
-    color: red;
+  color: red;
 }
 
-h1{
-    cursor: not-allowed;
-    border: 2px solid red;
-    border-radius: 50px;
+h1 {
+  cursor: not-allowed;
+  border: 2px solid red;
+  border-radius: 50px;
 }

@@ -1,4 +1,4 @@
-# ⌨️  Essential keyboard shortcuts
+# ⌨️ Essential keyboard shortcuts
 
 todo: chatGPT Shortcuts
 
