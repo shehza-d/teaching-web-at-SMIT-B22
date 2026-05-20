@@ -1,5 +1,7 @@
 # Web Development Course
 
+![Cover Image](./temp/smit-b22.png)
+
 ## Class code repo for students `SMIT` Batch 22
 
 Gulshan campus 5pm to 7pm TTS | Mar 2026 - 2027
