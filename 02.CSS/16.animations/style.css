@@ -1,0 +1,78 @@
+/* https://animate.style */
+/* https://css-tricks.com/almanac/properties/a/animation/ */
+
+/* Transition: Needs a trigger */
+
+button {
+  transition: 500ms;
+  background-color: blue;
+}
+
+button:hover {
+  background-color: red;
+}
+
+/* ------------ Animation ------------ */
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+
+  animation: merakeyframe;
+
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-delay: 3s;
+  animation-direction: alternate-reverse;
+
+  transition: 500ms;
+}
+
+.box:hover {
+  transform: translateY(10px);
+  transform: scale(0.9);
+  transform: rotate(45deg);
+}
+
+/* @keyframes defines animation steps */
+@keyframes merakeyframe {
+  /* from {
+    background-color: blue;
+  }
+
+  to {
+    background-color: red;
+  } */
+
+  0% {
+    background-color: red;
+  }
+  10% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  85% {
+    background-color: green;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+/* -------- example -------- */
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/*
+transform  → WHAT changes
+transition → smooth change on trigger
+animation  → automatic movement/change
+*/
+

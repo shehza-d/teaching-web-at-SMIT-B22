@@ -1,0 +1,50 @@
+/*
+https://cssgradient.io
+https://coolors.co */
+
+body {
+  height: 100vh;
+  background: linear-gradient(red, blue);
+  background: radial-gradient(red, blue);
+
+  background: linear-gradient(to left ,red, blue);
+
+  /* Direction */
+  background: linear-gradient(45deg, red, blue);
+  /* Possible directions:
+  to right
+  to left
+  to bottom
+  to top
+  45deg
+  */
+
+  /* background: linear-gradient(red, yellow, green); */
+  background-color: purple; /* fallback */
+  background: linear-gradient(to right, purple, pink);
+}
+
+/* Gradient Overlay (Gradient can darken image, Helps text readability) */
+body {
+  background:
+    linear-gradient(rgba(255, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("https://drawingdesk-storage.s3.ap-northeast-1.amazonaws.com/Blog/Featured/blog_1746436122900.jpg");
+
+  /* https://www.joshwcomeau.com/gradient-generator/ */
+
+  background-image: linear-gradient(
+    70deg,
+    hsl(283deg 100% 66%) 0%,
+    hsl(267deg 100% 72%) 11%,
+    hsl(241deg 100% 77%) 21%,
+    hsl(215deg 100% 67%) 31%,
+    hsl(200deg 100% 50%) 40%,
+    hsl(196deg 100% 50%) 48%,
+    hsl(193deg 100% 50%) 55%,
+    hsl(191deg 100% 50%) 60%,
+    hsl(188deg 100% 50%) 65%,
+    hsl(186deg 100% 50%) 70%,
+    hsl(184deg 100% 50%) 78%,
+    hsl(182deg 100% 50%) 88%,
+    hsl(181deg 100% 63%) 100%
+  );
+}
