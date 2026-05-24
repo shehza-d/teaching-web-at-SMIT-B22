@@ -4,62 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .navbar {
-        display: flex;
-        border: 2px solid red;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .navbar > div {
-        display: none;
-        gap: 46px;
-        border: 2px solid green;
-        align-items: baseline;
-      }
-      .navbar button {
-        border-radius: 5.95px;
-        background-color: #75bf7a;
-        border: none;
-        color: white;
-        padding: 8px 16px;
-      }
-      section {
-        border: 2px solid green;
-        height: 88vh;
-        /* display: flex; */
-        padding: 5px;
+    <style></style>
 
-        display: flex;
-        /* flex-direction: row; */
-      }
-      section > div {
-        width: 50%;
-        border: 2px solid red;
-      }
-
-      .hero-section-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .hero-section-text {
-        /* margin-left: 100px; */
-        display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        flex-direction: column;
-      }
-
-      @media (min-width: 800px) {
-        i {
-          display: none !important;
-        }
-        .navbar > div {
-          display: flex;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -82,7 +29,7 @@
       <i class="fa-solid fa-bars"></i>
     </nav>
 
-    <section>
+    <section class="hero-section">
       <div class="hero-section-text">
         <h2>DOWNLOAD APP, SAVE MONEY, MAKE FRIENDS!</h2>
         <p>
@@ -91,13 +38,41 @@
           for ? Lets ride together
         </p>
         <div>
-          <button>DOWNLOAD</button>
-          <button>DOWNLOAD</button>
+          <button class="black-btn">
+            <i class="fa-brands fa-app-store"></i>
+            <span> DOWNLOAD </span>
+          </button>
+          <button class="black-btn">DOWNLOAD</button>
         </div>
       </div>
       <div class="hero-section-img">
         <img src="./Group 78.png" width="553" alt="" />
       </div>
     </section>
+
+    <section class="green-section">
+      <p>Let's go. Get a link to download the app.</p>
+
+      <div >
+        <input type="text" />
+        <button class="black-btn ye-apply-btn-hy">APPLY TO DRIVE</button>
+      </div>
+    </section>
+<h2 class="tere-subheading">HOW <span> TERE </span> WORKS</h2>
+
+
+<div class="circle">
+  <img src="./Group 3693.png" width="300" alt="">
+</div>
+<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </body>
 </html>
