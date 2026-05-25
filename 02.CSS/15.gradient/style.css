@@ -7,7 +7,7 @@ body {
   background: linear-gradient(red, blue);
   background: radial-gradient(red, blue);
 
-  background: linear-gradient(to left ,red, blue);
+  background: linear-gradient(to left, red, blue);
 
   /* Direction */
   background: linear-gradient(45deg, red, blue);
@@ -27,7 +27,8 @@ body {
 /* Gradient Overlay (Gradient can darken image, Helps text readability) */
 body {
   background:
-    linear-gradient(rgba(255, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("https://drawingdesk-storage.s3.ap-northeast-1.amazonaws.com/Blog/Featured/blog_1746436122900.jpg");
+    linear-gradient(rgba(255, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("https://drawingdesk-storage.s3.ap-northeast-1.amazonaws.com/Blog/Featured/blog_1746436122900.jpg");
 
   /* https://www.joshwcomeau.com/gradient-generator/ */
 

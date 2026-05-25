@@ -1,5 +1,5 @@
-:root{
-    --primary:rgb(194, 60, 244);
+:root {
+  --primary: rgb(194, 60, 244);
 }
 
 .navbar {
@@ -49,7 +49,7 @@
 }
 
 .green-section {
-  background-color:  var(--primary);
+  background-color: var(--primary);
   margin: 80px;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -60,54 +60,53 @@
   justify-content: space-between;
 }
 .green-section > p {
-    color: white;
-    font-size: 28px;
-    border: 2px solid red;
-    width: 30%;
+  color: white;
+  font-size: 28px;
+  border: 2px solid red;
+  width: 30%;
 }
 
 .green-section input {
-    padding: 10px;
-    font-size: 40px;
+  padding: 10px;
+  font-size: 40px;
 }
 
 .green-section > div {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
-.black-btn{
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    font-weight: 800;
-    font-size: 22px;
+.black-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-weight: 800;
+  font-size: 22px;
 }
 
 .ye-apply-btn-hy {
-    width: 260px;
-
+  width: 260px;
 }
 
-.tere-subheading{
-    text-align: center;
+.tere-subheading {
+  text-align: center;
 }
 
 .tere-subheading > span {
-color:  var(--primary);
+  color: var(--primary);
 }
 
 .circle {
-    height: 400px;
-    width: 400px;
-    border-radius: 500px;
-    background-color:  var(--primary);
+  height: 400px;
+  width: 400px;
+  border-radius: 500px;
+  background-color: var(--primary);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 800px) {
   /* i {
