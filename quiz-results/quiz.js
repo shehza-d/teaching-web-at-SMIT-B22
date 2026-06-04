@@ -24,7 +24,7 @@ const formatted = students.map((s) => {
       "Unknown",
     marks,
     percentage,
-    status: s.status || (percentage >= 70 ? "passed" : "failed"),
+    status: s.status || (percentage >= 70 ? "✅ passed" : "❌ failed"),
   };
 });
 
