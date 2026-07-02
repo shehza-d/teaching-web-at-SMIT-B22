@@ -23,11 +23,25 @@ if (isEnroll && passed && age > 18) {
 
 // Nested
 
+let input_number = Number(
+  prompt("Enter your number to check your grade in one subject."),
+);
 
-
+if (input_number > 90) {
+  alert("Grade: A+");
+} else if (input_number > 80) {
+  alert("Grade: A");
+} else if (input_number > 70) {
+  alert("Grade: B");
+} else if (input_number > 60) {
+  alert("Grade: C");
+} else if (input_number > 50) {
+  alert("Grade: D");
+} else {
+  alert("Grade: F");
+}
 
 // ------------------------
-
 
 // let age = 20;
 
@@ -38,4 +52,3 @@ if (isEnroll && passed && age > 18) {
 // } else  {
 //   console.log("sabar karo!");
 // }
-
