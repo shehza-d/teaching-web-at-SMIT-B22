@@ -15,7 +15,7 @@ _By the end of this course, students will be able to:_
 - Improve communication and confidence.
 - Build online presence.
 
-- Programming
+- Programming Concepts:
   - **Understand core concepts**
     Grasp fundamental concepts of programming and logic.
   - **Write clean and working code**
@@ -29,6 +29,29 @@ _By the end of this course, students will be able to:_
   - **Collaborate and learn independently**
     Work with others, ask good questions, and continue learning beyond the course.
 
+- Programming Topics Overview:
+  - Advanced JavaScript (ES6+)
+  - Git & GitHub
+  - Responsive Web Design
+  - Authentication & Authorization
+  - Database Design
+  - MongoDB & SQL
+  - Deployment
+  - Project Architecture
+  - Debugging Techniques
+  - Problem Solving (LeetCode and CodeWars)
+  - Best Practices for Clean & Maintainable Code
+  - [Complete Outline](https://www.saylanimit.com/courses/modern-web-application-development)
+
+- 🎯 **By the end of this course, you'll be able to:**
+  - ✅ Build complete full-stack web applications.
+  - ✅ Work with modern development tools and workflows.
+  - ✅ Connect front-end and back-end applications.
+  - ✅ Design and work with databases.
+  - ✅ Deploy your own applications.
+  - ✅ Write cleaner, scalable, and maintainable code.
+  - ✅ Think like a software developer through problem solving and project-based learning.
+
 ---
 
 WhatsApp Channel 💻: [whatsapp.com/channel/0029Va8AsRW0wajyhNcx4T1Y](https://whatsapp.com/channel/0029Va8AsRW0wajyhNcx4T1Y)
@@ -38,4 +61,4 @@ WhatsApp Channel 💻: [whatsapp.com/channel/0029Va8AsRW0wajyhNcx4T1Y](https://w
 - [Pakistan's Largest NGO | New Documentary](https://youtu.be/MIpmnJG0yyc)
 - [Empower Your Tech Journey with SMIT](https://youtu.be/VcV841p85Ew)
 - [Saylani Mega I.T Entrance Exam 2023](https://youtu.be/uaaVCBPHOp8)
-.
+  .
