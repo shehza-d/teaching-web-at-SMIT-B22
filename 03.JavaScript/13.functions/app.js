@@ -20,8 +20,26 @@ function sum(num1, num2) {
 // sum(5, 5);
 // sum(15 , 15);
 
-function myNewFunction() {
-  return "shehzad";
-}
+// function myNewFunction() {
+//   return 6
+//   console.log("ye kabhi bhi nhi chale ga");
+// }
 
 // console.log(myNewFunction());
+
+// https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript
+
+function multiply(a, b, c = 1) {
+  return a * b * c;
+}
+
+// console.log(multiply(6, 5, 2));
+// console.log(multiply(7, 3));
+// console.log(multiply(5, 5));
+
+function newFun(city = "karachi") {
+  console.log(city); // kuxh ma milne per "karachi" as default parameter mil jaye ga
+}
+// newFun();
+
+//
