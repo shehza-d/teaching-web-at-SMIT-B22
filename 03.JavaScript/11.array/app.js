@@ -1,15 +1,14 @@
-// array aur object hamesha const se bana hy!!!
-
 const students = [
   "ahmed",
   "anas",
   "fatima",
-  "razzaq",
   "zohaib",
-  "fatima",
-  "shehzad",
+  "ayesha",
+  "razzaq",
   "daniyal",
+  "shehzad",
 ];
+// array aur object hamesha const se bana hy!!!
 
 students[2] = "Haseeb";
 
@@ -39,3 +38,14 @@ marks.sort((a, b) => a - b); // number ko sort karna ascending
 marks.sort((a, b) => b - a); // descending
 
 console.log(marks);
+
+// 18/Jul/2026
+// Splice and slice
+
+let deletedElements = students.splice(2, 0, "asim", "owais");
+
+console.log("students: ", students);
+console.log("deleted: ", deletedElements);
+
+let result = students.slice(2, 7);
+console.log("result: ", result);
