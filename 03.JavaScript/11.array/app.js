@@ -40,11 +40,18 @@ marks.sort((a, b) => b - a); // descending
 console.log(marks);
 
 // 18/Jul/2026
-// Splice and slice
+// Splice and Slice
 
-let deletedElements = students.splice(2, 0, "asim", "owais");
+students.sort(); // original array change ho jaye ga
+students.toSorted(); // original array change NHI ho jaye ga
+
+console.log("student Array: ", students);
+
+let deletedElements = students.splice(2, 1);
+let copiedArray = students.toSpliced(2, 1);
 
 console.log("students: ", students);
+console.log("copied Array: ", copiedArray);
 console.log("deleted: ", deletedElements);
 
 let result = students.slice(2, 7);
