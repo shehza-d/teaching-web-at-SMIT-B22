@@ -1,4 +1,3 @@
-
 // Primitive data types are 7
 // 1. String
 // 2. Number
@@ -12,15 +11,13 @@ let module_one_passed_students; // snake case
 let moduleOnePassedStudents; // camel case
 // let module-one-passed-students; // kebab case
 
-
-
 alert("Hello \n world");
 
 // this is blocking code (mtlb isky baad aagye code nhi chale ga)
 
 console.log("hello");
 
-BBSSNNU(BigInt, Boolean, String, Symbol, Number, Null, Undefined);
+// BBSSNNU = (BigInt, Boolean, String, Symbol, Number, Null, Undefined);
 
 let test = 48534384934384348;
 let b = 485343849343843488457454n;
@@ -61,20 +58,20 @@ console.log(2 + 3 * 4);
 
 // TODO -----------------
 
-console.log("Test " + 2 - 2);
+console.log("Test " + 2 + 2); // 'Test 22'
 
-console.log("2" + 2 - 2);
+console.log("2" + 2 - 2); // 20
 
-console.log("2" - 2 + 2);
+console.log("2" - 1 + 2); // 3
 
-console.log("Test" - 2 + 2);
+console.log("Test" - 2 + 2); // NaN
 
-console.log("Test" + 2 * 2);
+console.log("Test" + 2 * 2); // Test4
 
-console.log(("Test" + 2) * 2);
+console.log(("Test" + 2) * 2);// NaN
 
-console.log("Power ", 3 * 5 ** 4 * 2);
+console.log("Power ", 3 * 5 ** 4 * 2); // Power 3750
 
 console.log((3 + 4) * 5);
 
-console.log(4 * (4 - 55) + 60 / (-4 * 55));
+console.log(4 * (4 - 55) + 60 / (-4 * 55)); // -204

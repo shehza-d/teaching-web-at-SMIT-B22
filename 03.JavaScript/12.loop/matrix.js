@@ -1,3 +1,5 @@
+// https://pythontutor.com/javascript.html
+
 const matrix1 = [
   [8, 5, 4],
   [2, 3, 0],
@@ -21,9 +23,6 @@ const matrix2 = [
 
 // console.log(matrix1[1][0] + matrix2[1][0]);
 // console.log(matrix1[1][1] + matrix2[1][1]);
-
-// i = 3
-// j = 0
 
 let result = [];
 

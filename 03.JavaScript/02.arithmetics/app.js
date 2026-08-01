@@ -7,7 +7,7 @@ console.log(13 / 5);
 console.log(13 % 5); // Modulus humme Remainder batata hy
 console.log(17 % 6); // Modulus humme Remainder batata hy
 console.log(23 % 7); // Modulus humme Remainder batata hy
-console.log(6 ** 17); // Exponentiation
+console.log(6 ** 12); // Exponentiation
 
 // -------------------
 var a = 5; // old way
@@ -28,4 +28,4 @@ let A = 6;
 
 console.log(a);
 
-let Let = 6; // no keywords
+let let = 6; // no keywords
