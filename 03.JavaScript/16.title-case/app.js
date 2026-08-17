@@ -1,6 +1,4 @@
-
-let myString = "mY NaMe IS shEhZAd";
-// "My Name Is Shehzad"
+let myString = "mY NaMe IS shEhZAd"; // "My Name Is Shehzad"
 
 let array = myString.split(" ");
 
