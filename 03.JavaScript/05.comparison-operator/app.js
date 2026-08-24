@@ -10,7 +10,7 @@ console.log(Math.floor(5.9));
 console.log(Math.abs(-6)); // sab value ko positive kardeta hy
 
 let dice = Math.floor(Math.random() * 6);
-
+// O0
 console.log(dice + 1); // gives any random value between 0 to 1
 
 let a = "5";
@@ -42,3 +42,5 @@ console.log("5" === "5");
 console.log(5 !== 6);
 
 console.log(7 >= 7.001);
+
+// 634
