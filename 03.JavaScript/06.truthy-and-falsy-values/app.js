@@ -31,7 +31,7 @@ let car;
 // }
 
 if (undefined) {
-    console.log("Kam karo");
+  console.log("Kam karo");
 }
 
 // let testing = Boolean(-10);

@@ -12,12 +12,13 @@
 
 ## JavaScript Course Progress
 
-> **Reference:** *A Smarter Way to Learn JavaScript*
+> **Reference:** _A Smarter Way to Learn JavaScript_
 > **Purpose:** This is the teaching roadmap. The institute's quiz boundaries remain fixed.
 
 ---
 
 ## ✅ Quiz 1 — Fundamentals
+
 **Chapters 1–20**
 
 - [ ] Alerts, prompts & console
@@ -45,6 +46,7 @@
 ---
 
 ## ✅ Quiz 2 — Strings, Functions & Problem Solving
+
 **Chapters 20–40**
 
 - [ ] String manipulation
@@ -70,6 +72,7 @@
 ---
 
 ## ✅ Quiz 3 — DOM & Events
+
 **Chapters 40–60**
 
 - [ ] Script placement & comments
@@ -93,6 +96,7 @@
 ---
 
 ## ✅ Quiz 4 — Objects, OOP & Browser APIs
+
 **Chapters 60–89**
 
 - [ ] Objects

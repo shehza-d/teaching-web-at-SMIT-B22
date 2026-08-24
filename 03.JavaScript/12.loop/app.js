@@ -49,7 +49,7 @@ for (let i = 0; i < 20; i++) {
 //
 let i = 1;
 
-for (; i <= 10; ) {
+for (; i <= 10;) {
   console.log(i);
   i++;
 }

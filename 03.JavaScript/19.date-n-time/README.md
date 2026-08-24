@@ -50,15 +50,15 @@ new Date("2026-08-24T15:30:00");
 ```js
 let date = new Date();
 
-date.getFullYear();      // Year
-date.getMonth();         // Month (0–11)
-date.getDate();          // Day of month (1–31)
-date.getDay();           // Day of week (0–6)
+date.getFullYear(); // Year
+date.getMonth(); // Month (0–11)
+date.getDate(); // Day of month (1–31)
+date.getDay(); // Day of week (0–6)
 
-date.getHours();         // Hour
-date.getMinutes();       // Minutes
-date.getSeconds();       // Seconds
-date.getMilliseconds();  // Milliseconds
+date.getHours(); // Hour
+date.getMinutes(); // Minutes
+date.getSeconds(); // Seconds
+date.getMilliseconds(); // Milliseconds
 ```
 
 ### Remember
@@ -301,8 +301,8 @@ console.log(isNaN(date.getTime()));
 let date = new Date();
 
 let formatted = new Intl.DateTimeFormat("en-PK", {
-    dateStyle: "full",
-    timeStyle: "short"
+  dateStyle: "full",
+  timeStyle: "short",
 }).format(date);
 
 console.log(formatted);
@@ -330,7 +330,7 @@ let month = new Date().getMonth();
 let deadline = new Date("2026-08-25");
 
 if (new Date() > deadline) {
-    console.log("Deadline passed");
+  console.log("Deadline passed");
 }
 ```
 

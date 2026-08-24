@@ -27,6 +27,7 @@ Learning keyboard shortcuts is one of the fastest ways to improve your efficienc
 - **Close window** `Alt + F4` (imp)
 - **Lock computer** → `Win + L`
 - **Screenshot (full)** → `PrtScn`
+
 <!-- - **Open Task Manager** → `Ctrl + Shift + Esc` -->
 
 ## 🌐 Google Chrome Shortcuts

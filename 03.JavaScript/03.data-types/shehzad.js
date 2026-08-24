@@ -68,7 +68,7 @@ console.log("Test" - 2 + 2); // NaN
 
 console.log("Test" + 2 * 2); // Test4
 
-console.log(("Test" + 2) * 2);// NaN
+console.log(("Test" + 2) * 2); // NaN
 
 console.log("Power ", 3 * 5 ** 4 * 2); // Power 3750
 
