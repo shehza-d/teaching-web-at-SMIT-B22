@@ -21,27 +21,30 @@
 
 **Chapters 1–20**
 
-- [ ] Alerts, prompts & console
+- [x] Alerts, prompts & console
 - [ ] Variables & Data Types
-  - [ ] `var`, `let`, `const`
+  - [x] `var`, `let`, `const`
   - [ ] Hoisting
-  - [ ] `null`, `undefined`, `NaN`
-- [ ] Parsing numbers
-- [ ] Operators
-  - [ ] Arithmetic, comparison, assignment & logical
-  - [ ] `==` vs `===`
-  - [ ] Precedence
-- [ ] String concatenation & template literals
-- [ ] `if`, `else if`, `else` & ternary
-  - [ ] Truthy & falsy
-  - [ ] Nested conditions
-- [ ] Arrays
-  - [ ] Adding/removing elements
-  - [ ] `push`, `pop`, `shift`, `unshift`, `slice`, `splice`
-- [ ] Loops
+  - [x] `null`, `undefined`, `NaN`
+- [x] Converting strings to numbers (Parsing numbers)
+- [x] Operators
+  - [x] Arithmetic operators
+  - [x] Comparison operators
+  - [ ] Assignment operators (skip)
+  - [x] Logical operators
+- [x] String concatenation & template literals
+- [x] `if`, `else`
+  - [x] `else if`
+  - [x] Ternary
+  - [x] Truthy & falsy
+  - [x] Nested conditions
+- [x] Arrays
+  - [x] Adding/removing elements
+  - [x] `push`, `pop`, `shift`, `unshift`, `slice`, `splice`
+- [x] Loops
   - [ ] `for`, `for...of`, `for...in`
-  - [ ] Flags, `length`, `break`
-  - [ ] Nested loops
+  - [x] Flags, `length`, `break`
+  - [x] Nested loops
 
 ---
 
@@ -54,8 +57,8 @@
 - [x] Numbers
   - [x] Rounding, random numbers & decimal precision
   - [x] String ↔ Number conversion
-- [ ] Date & Time
-  - [ ] Creating, extracting & changing dates
+- [x] Date & Time
+  - [x] Creating, extracting & changing dates
   - [ ] `date-fns`
 - [x] Functions
   - [x] Declarations, expressions & arrow functions
@@ -67,7 +70,7 @@
   - [ ] `some`, `every`, `includes`
 - [ ] `switch`
 - [ ] `while` & `do...while`
-- [ ] JavaScript problem solving / LeetCode
+- [x] JavaScript problem solving / LeetCode
 
 ---
 
@@ -83,7 +86,7 @@
   - [ ] Event delegation
 - [ ] DOM
   - [ ] What is the DOM?
-  - [ ] Selecting elements
+  - [x] Selecting elements
   - [ ] Parents & children
   - [ ] Attributes
   - [ ] `textContent`, `classList` & styles
@@ -103,7 +106,7 @@
   - [ ] Properties, methods & `this`
   - [ ] Destructuring, rest & spread
   - [ ] Optional chaining
-  - [ ] `Object.keys()`, `values()`, `entries()`
+  - [x] `Object.keys()`, `values()`, `entries()`
 - [ ] OOP with JavaScript
   - [ ] What is OOP? & OOP in JavaScript
   - [ ] Constructor functions & `new`
@@ -111,7 +114,7 @@
   - [ ] ES6 Classes
   - [ ] Getters & Setters
   - [ ] Inheritance, `extends` & `super`
-- [ ] JSON
+- [x] JSON
   - [ ] `JSON.stringify()` & `JSON.parse()`
 - [ ] Browser control
   - [ ] `window.location`
@@ -185,7 +188,7 @@
 - [ ] Counter
 - [ ] Digital Clock
 - [ ] Form Validation
-- [ ] Todo List
+- [x] Todo List
 - [ ] Quiz App
 - [ ] Weather/API App
 - [ ] Local Storage Project
