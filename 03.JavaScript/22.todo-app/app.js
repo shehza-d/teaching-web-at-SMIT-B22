@@ -1,17 +1,31 @@
 // https://notebook.google.com/notebook/92c37792-f247-42ef-a1b8-e480e83db299/artifact/c6d78448-01fd-4388-9e41-527a9b20d882?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_
 
-// const input = document.querySelector("#todo-input")
+const input = document.querySelector("#todo-input");
 const ul = document.querySelector("#todo-list");
-
-// function addTodo(event) {
-//     event.preventDefault();
-
-//     console.log(input.value)
-
-// }
 
 const todos = ["complete homework", "practice", "recite quran", "read book"];
 
-for (let i = 0; i < todos.length; i++) {
-  ul.innerHTML += `<li>${todos[i]}</li>`;
+function addTodo(event) {
+  event.preventDefault(); // page refresh na ho
+
+  todos.push(input.value);
+
+  showTodos();
+}
+
+function showTodos() {
+  // array se values lekar screen per show karna
+
+  ul.innerHTML = "";
+
+  for (let i = 0; i < todos.length; i++) {
+    ul.innerHTML += `<li>${todos[i]} <button onclick="deleteTodo(${i})">delete</button></li>`;
+  }
+}
+showTodos();
+
+function deleteTodo(index) {
+  todos.splice(index, 1); // array se todo ko delete kr rahi hy
+
+  showTodos(); // array ki values ko screen per show/update kr rahi hy
 }

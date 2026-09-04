@@ -11,4 +11,3 @@ let myDate2 = dateFns.formatDistanceToNow(
   },
 );
 
-console.log(myDate2.replace('utes',''));
