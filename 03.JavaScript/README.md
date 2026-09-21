@@ -15,7 +15,7 @@
 
 ## 1. Getting Started
 
-- [ ] Script placement and `defer`
+- [x] Script placement and `defer`
 - [x] Console output
 - [ ] Browser DevTools and debugging (important)
 - [x] Comments
@@ -29,7 +29,7 @@
 - [x] String-to-number conversion
 - [x] Number-to-string conversion
 - [x] Arithmetic operators
-- [ ] Assignment operators
+- [x] Assignment operators
 - [x] Comparison operators (prefer strict equality)
 - [x] Logical operators
 - [x] String concatenation
@@ -42,9 +42,9 @@
 - [x] Truthy and falsy values
 - [x] Ternary operator
 - [x] Nested conditions
-- [ ] `switch`
+- [x] `switch`
 - [x] String
-  - [ ] length and `trim()`
+  - [x] length and `trim()`
   - [x] String `includes()`, `indexOf()`
   - [x] String `slice()`
   - [x] `toLowerCase()` and `toUpperCase()`
@@ -59,7 +59,7 @@
   - [x] `splice()`
 - [x] `for` loop
   - [x] Flags, `break` and `continue`
-- [ ] `for...of`
+- [ ] `for...of,in`
 - [ ] `while`
 - [ ] `do...while` (skip)
 
