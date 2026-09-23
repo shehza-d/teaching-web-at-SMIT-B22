@@ -10,9 +10,6 @@
 
 > **Purpose:** This is the teaching roadmap.
 
-
-
-
 ## 1. Getting Started
 
 - [x] Script placement and `defer`
@@ -59,9 +56,9 @@
   - [x] `splice()`
 - [x] `for` loop
   - [x] Flags, `break` and `continue`
-- [ ] `for...of,in`
-- [ ] `while`
-- [ ] `do...while` (skip)
+- [x] `for...of,in`
+- [x] `while`
+- [x] `do...while` (skip)
 
 ## 5. Functions and Scope
 
@@ -83,12 +80,12 @@
   - [x] Object methods
     - [ ] `this` inside an object method
 - [ ] Arrays of objects (important)
-  - [ ] `forEach()`
-  - [ ] `map()`
+  - [x] `forEach()`
+  - [x] `map()`
   - [ ] `filter()`
   - [ ] `find()`
-  - [ ] `for...in`; use object methods later
-  - [ ] Array `includes()`
+  - [x] `for...in`; use object methods later
+  - [x] Array `includes()`
   - [ ] `some()` and `every()`
   - [ ] `reduce()`; one total calculation
 - [ ] Destructuring
@@ -127,7 +124,7 @@
   - [ ] Keyboard events
   - [ ] Exhaustive mouse-event coverage (skip)
 - [ ] Form submit events
-  - [ ] `preventDefault()`
+  - [x] `preventDefault()`
   - [ ] reset and focus
 - [x] Form handling and validation (important)
 - [ ] Event bubbling
@@ -171,18 +168,18 @@
   - [ ] `.then()` and `.catch()`
   - [ ] Promise `.finally()`
 - [ ] `async` and `await` (important)
-- [ ] `try` and `catch` (important)
-  - [ ] `throw`
-  - [ ] `finally`
-  - [ ] Common error types and reading error messages
+- [x] `try` and `catch` (important)
+  - [x] `throw`
+  - [x] `finally`
+  - [x] Common error types and reading error messages
 
 ## 12. Fetch and APIs
 
-- [ ] HTTP requests and responses
+- [x] HTTP requests and responses
   - [ ] Status codes
 - [ ] GET with `fetch()`
   - [ ] Reading JSON responses
-  - [ ] Checking `response.ok`; HTTP errors do not automatically reject fetch (important)
+  - [x] Checking `response.ok`; HTTP errors do not automatically reject fetch (important)
 - [ ] Rendering API data
   - [ ] Loading state
   - [ ] Empty state
