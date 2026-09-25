@@ -79,15 +79,15 @@
   - [x] Reading and updating properties
   - [x] Object methods
     - [ ] `this` inside an object method
-- [ ] Arrays of objects (important)
+- [x] Arrays of objects (important)
   - [x] `forEach()`
   - [x] `map()`
-  - [ ] `filter()`
-  - [ ] `find()`
+  - [x] `filter()`
+  - [x] `find()`
   - [x] `for...in`; use object methods later
   - [x] Array `includes()`
-  - [ ] `some()` and `every()`
-  - [ ] `reduce()`; one total calculation
+  - [x] `some()` and `every()`
+  - [ ] `reduce()`; (skip)
 - [ ] Destructuring
 - [ ] Spread syntax
 - [x] Rest syntax
