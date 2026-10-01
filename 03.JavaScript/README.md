@@ -68,9 +68,9 @@
 - [x] Local and global variables
 - [x] Block scope
 - [x] Function expressions and Arrow functions
-- [ ] Hoisting and temporal dead zone
-- [ ] Callback functions (important)
-- [ ] Higher-order functions
+- [x] Hoisting and temporal dead zone
+- [x] Callback functions (important)
+- [x] Higher-order functions
 - [x] Additional LeetCode practice (skip)
 
 ## 6. Objects and Useful Array Methods
@@ -88,7 +88,7 @@
   - [x] Array `includes()`
   - [x] `some()` and `every()`
   - [ ] `reduce()`; (skip)
-- [ ] Destructuring
+- [x] Destructuring
 - [ ] Spread syntax
 - [x] Rest syntax
 - [ ] Optional chaining
@@ -159,15 +159,15 @@
 
 ## 11. Async JavaScript and Errors
 
-- [ ] Synchronous versus asynchronous execution
-  - [ ] `setTimeout()`; demonstrate execution order
-- [ ] Call stack
-- [ ] Event loop; explain why async callbacks run later
-- [ ] Callback hell exercises (skip)
-- [ ] Promises and their states
+- [x] Synchronous versus asynchronous execution
+  - [x] `setTimeout()`; demonstrate execution order
+- [x] Call stack
+- [x] Event loop; explain why async callbacks run later
+- [x] Callback hell exercises (skip)
+- [x] Promises and their states
   - [ ] `.then()` and `.catch()`
   - [ ] Promise `.finally()`
-- [ ] `async` and `await` (important)
+- [x] `async` and `await` (important)
 - [x] `try` and `catch` (important)
   - [x] `throw`
   - [x] `finally`
@@ -177,18 +177,18 @@
 
 - [x] HTTP requests and responses
   - [ ] Status codes
-- [ ] GET with `fetch()`
-  - [ ] Reading JSON responses
+- [x] GET with `fetch()`
+  - [x] Reading JSON responses
   - [x] Checking `response.ok`; HTTP errors do not automatically reject fetch (important)
-- [ ] Rendering API data
-  - [ ] Loading state
+- [x] Rendering API data
+  - [x] Loading state
   - [ ] Empty state
   - [ ] Error state and retry (important)
 - [ ] POST; send a JSON body
 - [ ] PUT and PATCH
 - [ ] DELETE
-- [ ] `Promise.all()`
-- [ ] `Promise.allSettled()` (skip)
+- [x] `Promise.all()`
+- [x] `Promise.allSettled()` (skip)
 - [ ] `Promise.race()` (skip)
 - [ ] API app; choose a searchable directory or weather app
 
