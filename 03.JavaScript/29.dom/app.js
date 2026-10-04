@@ -1,4 +1,4 @@
-const { createElement } = require("react");
+// https://chatgpt.com/share/6abfc06e-8794-83e8-8f8a-76cdd06b3112
 
 const h1 = document.querySelector("h1");
 

@@ -102,18 +102,18 @@
 
 ## 7. DOM Basics
 
-- [ ] What the DOM is
+- [x] What the DOM is
 - [x] Selecting elements
-  - [ ] `textContent`
-  - [ ] `classList`
-  - [ ] Inline styles
-  - [ ] Attributes; practice changing an image source
+  - [x] `textContent`
+  - [x] `classList`
+  - [x] Inline styles
+  - [x] Attributes; practice changing an image source
 - [ ] Parents and children
-- [ ] Creating elements
-  - [ ] Appending and inserting elements
+- [x] Creating elements
+  - [x] Appending and inserting elements
   - [ ] Removing elements
-- [ ] Rendering arrays as a list (important)
-  - [ ] `innerHTML`; use `textContent` for user/API text (important)
+- [x] Rendering arrays as a list (important)
+  - [x] `innerHTML`; use `textContent` for user/API text (important)
 
 ## 8. Events and Forms
 
