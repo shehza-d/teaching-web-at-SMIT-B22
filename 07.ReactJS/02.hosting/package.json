@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"deploy": "surge ./dist --domain my-react-app.surge.sh",
+		"deploy": "surge ./dist my-react-app.surge.sh",
 		"deploy": "npm run build && cp dist/index.html dist/200.html && surge ./dist --domain my-react-app.surge.sh",
 		"format": "npx prettier --write ."
 	}

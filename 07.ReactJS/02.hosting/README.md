@@ -90,3 +90,13 @@ npm run deploy
 - Only the `dist` folder is deployed, not your source code.
 - Your domain must be unique.
 - For React Router apps, [additional configuration](./react-router.md) may be required for page refreshes.
+
+## Remove a Published Website
+
+To remove your website from Surge, run:
+
+```bash
+surge my-react-app.surge.sh teardown
+```
+
+Replace the example domain with your actual domain. This command takes the website offline, so use it carefully.
