@@ -26,43 +26,55 @@ npm run preview
 Install Surge globally (only required once).
 
 ```bash
-npm install -g surge
+npm i -g surge
 ```
 
-## Step 4: Deploy Your App
+## Step 4: Log In to Surge
 
-Run the following command from your project's root directory:
+Log in before your first deployment:
 
 ```bash
-surge
+surge login
 ```
 
-1. **Email & Password:** Create a Surge account or log in (first deployment).
-2. **Project:** Confirm the `dist` folder path.
-3. **Domain:** Enter a unique domain, e.g. `my-react-app.surge.sh`.
-4. Press Enter to deploy!
+- Enter your **email address** and **password**.
+- Password is not show while typing.
+- If the email is new, Surge creates an account automatically.
+- You can also log in through your browser with `surge login --browser`.
+- Run `surge whoami` to confirm that you are logged in.
+- New users should run `surge verify` and verify their email address.
+
+## Step 5: Deploy Your App
+
+Run this command from your project's root directory:
+
+```bash
+surge ./dist example-app-shehzad.surge.sh
+```
+
+Replace `example-app-shehzad.surge.sh` with your actual domain.
 
 Your React app is now live!
 
-## Step 5: Update Your Website
+**Note:** Surge saves the domain in `dist/CNAME`. Move it to `public` so Vite keeps it after future builds:
+
+## Step 6: Update Your Website
 
 Whenever you make changes, **rebuild** and **redeploy**:
 
 ```bash
 npm run build
-surge dist my-react-app.surge.sh
+surge ./dist example-app-shehzad.surge.sh
 ```
-
-Replace `my-react-app.surge.sh` with your actual domain.
 
 ## Optional: Automate Deployment
 
-Add this in your `package.json` under scripts for eaiser deployments.
+Add this in your `package.json` under scripts for easier deployments:
 
 ```json
 {
 	"scripts": {
-		"deploy": "surge ./dist --domain my-react-app.surge.sh"
+		"deploy": "surge ./dist my-react-app.surge.sh"
 	}
 }
 ```
@@ -77,4 +89,4 @@ npm run deploy
 
 - Only the `dist` folder is deployed, not your source code.
 - Your domain must be unique.
-- For React Router apps, additional configuration may be required for page refreshes.
+- For React Router apps, [additional configuration](./react-router.md) may be required for page refreshes.
