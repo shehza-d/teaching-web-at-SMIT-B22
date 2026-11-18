@@ -1,0 +1,24 @@
+{
+	"name": "03.topic",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "echo \"hello saylani\" && vite",
+		"build": "vite build",
+		"deploy": "surge ./dist shehzad-first-react.surge.sh",
+		"lint": "oxlint",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8"
+	},
+	"devDependencies": {
+		"@types/react": "^19.2.17",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^6.0.4",
+		"oxlint": "^1.75.0",
+		"vite": "^8.2.0"
+	}
+}
